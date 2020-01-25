@@ -8,7 +8,7 @@ echo "========================="
 echo "Branch:"
 echo $TRAVIS_BRANCH
 echo "========================="
-if [[ $TRAVIS_PULL_REQUEST == false]]
+if [[ $TRAVIS_PULL_REQUEST == false ]]
 then
     if [[ $TRAVIS_BRANCH == "master" ]] || [[ $TRAVIS_BRANCH == "development" ]]
     then
