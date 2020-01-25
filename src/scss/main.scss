@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:500,600,700&display=swap');
+@import "../../node_modules/progressive-image.js/dist/progressive-image.css";
+@import "./footer.scss";
+
+html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+ 	font-weight: 400;
+    font-size: 14px;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-color: whitesmoke;
+    background-attachment: fixed;
+}
+
+h1
+{
+    margin: 0;
+    font-size: 45px;
+    font-weight: 400;
+}
+h2
+{
+    margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+}
+h3
+{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+
+.section_topic
+{
+    margin: 100px 20px 20px 20px;
+    font-weight: 700;
+    font-size: 45px;
+    color: #de1444;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    background: linear-gradient(288deg, #ff7f66, #de1444);
+    background-clip: text;
+    background-size: 100%;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: tracking-in-contract 0.6s ease-in-out;      
+
+    @media (max-width: 450px) {
+        margin-top: 80px;
+        font-size: 3em; 
+        height: auto;
+    }
+}
+
+@keyframes tracking-in-contract {
+    0% {
+      letter-spacing:1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.2;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  
+
+.title_box
+{
+    height: 250px;
+    background: linear-gradient(270deg, #ff7f66, #de1444);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+    &_text
+    {
+        width: 100%;
+        max-width: 1400px;
+        font-size: calc(38px + 2vw);
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        vertical-align: text-bottom;
+        margin: 0px 50px 10px 50px;
+        font-weight: 600;
+        color: whitesmoke;
+        animation: show-fromleft 0.6s ease-in-out;        
+    }
+    margin-bottom: 10px;
+}
+
+@keyframes show-fromleft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+  
+.fullpadding
+{
+    max-width: 1500px;
+    margin: auto;
+}  
+
+.pageblock-full
+{
+    max-width: 1500px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
