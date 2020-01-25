@@ -120,7 +120,7 @@ function work() {
                 body.classList.remove("nav-bg");
             }
         }
-    }
+    };
 
     scrollreveal().reveal(items, {
         easing: "ease-in-out",

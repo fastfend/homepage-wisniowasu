@@ -16,25 +16,6 @@ window.onscroll = function () {
             body.classList.remove("nav-bg");
         }
     }
-}
-
-
-var enableMenu = function enableMenu(element) {
-    if (!element.classList.contains("nav-active")) {
-        element.classList.add("nav-active");
-    }
-}
-var disableMenu = function disableMenu(element) {
-    if (element.classList.contains("nav-active")) {
-        element.classList.remove("nav-active");
-    }
-}
-var toggleClass = function toggleClass(element) {
-    if (element.classList.contains("nav-active")) {
-        disableMenu(element);
-    } else {
-        enableMenu(element);
-    }
 };
 
 var menuItems = document.querySelectorAll(".img_container");
@@ -70,7 +51,7 @@ menuItems.forEach((element) => {
                         block: "center",
                         behavior: "smooth"
                     });
-                }, 201)
+                }, 201);
             } else {
                 element.parentNode.scrollIntoView({
                     block: "center",

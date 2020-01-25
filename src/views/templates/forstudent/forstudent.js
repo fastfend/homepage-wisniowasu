@@ -1,10 +1,10 @@
-import './forstudent.scss'
+import "./forstudent.scss";
 
-import ScrollReveal from "scrollreveal";
+import scrollreveal from "scrollreveal";
 var items = document.querySelectorAll(".service-card");
-ScrollReveal().reveal(items, {
-    easing: 'ease-in-out',
-    distance: '20px'
+scrollreveal().reveal(items, {
+    easing: "ease-in-out",
+    distance: "20px"
 
 });
 

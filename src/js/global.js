@@ -5,9 +5,32 @@ import "progressive-image.js";
 import "lazysizes";
 
 var app = function () {
-    var body = undefined;
-    var menu = undefined;
-    var menuItems = undefined;
+    var body = null;
+    var menu = null;
+    var menuItems = null;
+    var enableMenu = function enableMenu(element) {
+        if (!element.classList.contains("nav-active")) {
+            element.classList.add("nav-active");
+            window.sessionStorage.setItem("wisniowasu-menulastopened", true);
+            window.sessionStorage.setItem("wisniowasu-menulasttimetopened", Date.now());
+        }
+
+    };
+    var disableMenu = function disableMenu(element) {
+        if (element.classList.contains("nav-active")) {
+            element.classList.remove("nav-active");
+            window.sessionStorage.setItem("wisniowasu-menulastopened", false);
+        }
+
+    };
+    var toggleClass = function toggleClass(element) {
+        if (element.classList.contains("nav-active")) {
+            disableMenu(element);
+        } else {
+            enableMenu(element);
+        }
+
+    };
     var applyListeners = function applyListeners() {
         menu.addEventListener("click", function () {
             var x = document.querySelectorAll(".hover");
@@ -25,29 +48,6 @@ var app = function () {
                 return disableMenu(body);
             }
         });
-    };
-    var enableMenu = function enableMenu(element) {
-        if (!element.classList.contains("nav-active")) {
-            element.classList.add("nav-active");
-            window.sessionStorage.setItem("wisniowasu-menulastopened", true);
-            window.sessionStorage.setItem("wisniowasu-menulasttimetopened", Date.now());
-        }
-
-    }
-    var disableMenu = function disableMenu(element) {
-        if (element.classList.contains("nav-active")) {
-            element.classList.remove("nav-active");
-            window.sessionStorage.setItem("wisniowasu-menulastopened", false);
-        }
-
-    }
-    var toggleClass = function toggleClass(element) {
-        if (element.classList.contains("nav-active")) {
-            disableMenu(element);
-        } else {
-            enableMenu(element);
-        }
-
     };
     var init = function init() {
         body = document.querySelector("body");
