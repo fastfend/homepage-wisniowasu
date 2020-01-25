@@ -65,8 +65,8 @@ function work() {
     }
 
     for (var i = 0; i < items.length; i++) {
-        items[parseInt(i)].addEventListener("click", onClick());
-        items[parseInt(i)].addEventListener("mouseleave", onLeave());
+        items[parseInt(i,10)].addEventListener("click", onClick());
+        items[parseInt(i,10)].addEventListener("mouseleave", onLeave());
     }
 
     if (!isMobile & !isEdge) {
