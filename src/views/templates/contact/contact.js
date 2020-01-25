@@ -1,28 +1,22 @@
-import './contact.scss'
-
-import ScrollReveal from "scrollreveal";
+import "./contact.scss";
+import scrollreveal from "scrollreveal";
 var items = document.querySelectorAll(".slideable");
-ScrollReveal().reveal(items, {
-    easing: 'ease-in-out',
-    distance: '20px'
+scrollreveal().reveal(items, {
+    easing: "ease-in-out",
+    distance: "20px"
 
 });
 
 document.body.classList.add("nologo");
-window.onscroll = function()
-        {
-            var scrollPosition = document.scrollingElement.scrollTop;
-            var body = document.body;
-        
-            if(scrollPosition > 170)
-            {
-                body.classList.add("nav-bg");
-            }
-            else
-            {
-                if(body.classList.contains("nav-bg"))
-                {
-                    body.classList.remove("nav-bg");
-                }
-            }
+window.onscroll = function () {
+    var scrollPosition = document.scrollingElement.scrollTop;
+    var body = document.body;
+
+    if (scrollPosition > 170) {
+        body.classList.add("nav-bg");
+    } else {
+        if (body.classList.contains("nav-bg")) {
+            body.classList.remove("nav-bg");
         }
+    }
+};

@@ -1,3 +1,4 @@
+#!/bin/sh
 echo "========================="
 echo "Sending to production server"
 echo "========================="

@@ -1,12 +1,10 @@
-#contact_container
-{
+#contact_container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.smallbox
-{
+.smallbox {
     margin: 20px;
     width: 100%;
     min-width: 220px;
@@ -19,9 +17,8 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    
-    .title
-    {
+
+    .title {
         margin: 0;
         text-transform: uppercase;
         font-weight: 700;
@@ -30,43 +27,39 @@
         color: rgba(0, 0, 0, 0.7)
     }
 
-    .links
-    {
-        > a
-        {
+    .links {
+        >a {
             display: inline-block;
             width: 40px;
             height: 40px;
             margin-top: 10px;
-            filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.2));
+            filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.2));
             transition: all 0.1s ease-in-out;
         }
-        @media (hover: hover)
-        {
-            > a:hover
-            {
-                filter: drop-shadow(0px 0px 4px rgba(0,0,0,0.3));
+
+        @media (hover: hover) {
+            >a:hover {
+                filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
             }
         }
-        .instagram-icon
-        {
+
+        .instagram-icon {
             background: url("../../../img/icons/icons8-instagram-50.png");
             background-size: contain;
         }
-        .facebook-icon
-        {
+
+        .facebook-icon {
             background: url("../../../img/icons/icons8-facebook-50.png");
             background-size: contain;
         }
-        .discord-icon
-        {
+
+        .discord-icon {
             background: url("../../../img/icons/icons8-discord-new-logo-50.png");
             background-size: contain;
         }
     }
 
-    .subtitle
-    {
+    .subtitle {
         margin: 5px 0px 5px 0px;
         text-transform: uppercase;
         font-weight: 500;
@@ -74,14 +67,12 @@
         color: rgba(0, 0, 0, 0.8)
     }
 
-    & > div
-    {
+    &>div {
         margin: 20px;
     }
 }
 
-iframe.discord
-{
+iframe.discord {
     min-width: 220px;
     height: 500px;
     margin: 20px;

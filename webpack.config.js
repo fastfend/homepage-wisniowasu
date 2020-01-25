@@ -19,7 +19,6 @@ const htmlMinifyOptions = {
   useShortDoctype: false,
   html5: true,
 };
-console.log(path.join( __dirname, './node_modules/handlebars-helpers/lib' ))
 module.exports = {
   context: path.resolve(__dirname),
   entry: {
