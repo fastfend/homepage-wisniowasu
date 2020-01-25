@@ -9,20 +9,15 @@ ScrollReveal().reveal(items, {
 });
 
 document.body.classList.add("nologo");
-window.onscroll = function()
-        {
-            var scrollPosition = document.scrollingElement.scrollTop;
-            var body = document.body;
-        
-            if(scrollPosition > 170)
-            {
-                body.classList.add("nav-bg");
-            }
-            else
-            {
-                if(body.classList.contains("nav-bg"))
-                {
-                    body.classList.remove("nav-bg");
-                }
-            }
+window.onscroll = function () {
+    var scrollPosition = document.scrollingElement.scrollTop;
+    var body = document.body;
+
+    if (scrollPosition > 170) {
+        body.classList.add("nav-bg");
+    } else {
+        if (body.classList.contains("nav-bg")) {
+            body.classList.remove("nav-bg");
         }
+    }
+}

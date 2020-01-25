@@ -11,8 +11,7 @@ var app = function () {
     var applyListeners = function applyListeners() {
         menu.addEventListener("click", function () {
             var x = document.querySelectorAll(".hover");
-            if(x !== null)
-            {
+            if (x !== null) {
                 x.forEach((element) => {
                     element.classList.remove("hover");
                 });
@@ -20,40 +19,32 @@ var app = function () {
 
             return toggleClass(body);
         });
-        window.addEventListener("click", function(e){   
+        window.addEventListener("click", function (e) {
             var x = document.getElementsByClassName("nav");
-            if (!(x[0].contains(e.target) || menu.contains(e.target)))
-            {
+            if (!(x[0].contains(e.target) || menu.contains(e.target))) {
                 return disableMenu(body);
             }
-          });
+        });
     };
-    var enableMenu = function enableMenu(element)
-    {
-        if (!element.classList.contains("nav-active"))
-        {
+    var enableMenu = function enableMenu(element) {
+        if (!element.classList.contains("nav-active")) {
             element.classList.add("nav-active");
             window.sessionStorage.setItem("wisniowasu-menulastopened", true);
             window.sessionStorage.setItem("wisniowasu-menulasttimetopened", Date.now());
         }
-        
+
     }
-    var disableMenu = function disableMenu(element)
-    {
-        if (element.classList.contains("nav-active"))
-        {
+    var disableMenu = function disableMenu(element) {
+        if (element.classList.contains("nav-active")) {
             element.classList.remove("nav-active");
             window.sessionStorage.setItem("wisniowasu-menulastopened", false);
         }
-        
+
     }
     var toggleClass = function toggleClass(element) {
-        if (element.classList.contains("nav-active"))
-        {
+        if (element.classList.contains("nav-active")) {
             disableMenu(element);
-        }
-        else 
-        {
+        } else {
             enableMenu(element);
         }
 
@@ -62,15 +53,14 @@ var app = function () {
         body = document.querySelector("body");
         menu = document.querySelector(".menu-icon");
         menuItems = document.querySelectorAll(".nav__list-item");
-        var opened =  JSON.parse(window.sessionStorage.getItem("wisniowasu-menulastopened"));
+        var opened = JSON.parse(window.sessionStorage.getItem("wisniowasu-menulastopened"));
         var diff = Date.now() - JSON.parse(window.sessionStorage.getItem("wisniowasu-menulasttimetopened"));
         var seconds = Math.floor(diff / (1000));
-        if(opened && seconds < 120)
-        {
+        if (opened && seconds < 120) {
             //enableMenu(body);
         }
         applyListeners();
-        
+
     };
     init();
 }();
