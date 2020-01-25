@@ -1,6 +1,6 @@
-import './home.scss'
-import "vanilla-tilt";
-import ScrollReveal from "scrollreveal";
+import "./home.scss";
+import vanillatilt from "vanilla-tilt";
+import scrollreveal from "scrollreveal";
 
 var isMobile = false; //initiate as false
 // device detection
@@ -11,7 +11,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 
 if(!isMobile)
 {
-    VanillaTilt.init(document.querySelector("#logo"), {
+    vanillatilt.init(document.querySelector("#logo"), {
         reverse:                true,  // reverse the tilt direction
         max:                    10,     // max tilt rotation (degrees)
         perspective:            1000,   // Transform perspective, the lower the more extreme the tilt gets.
@@ -45,18 +45,18 @@ window.onscroll = function()
 var items = document.querySelectorAll(".card");
 var items2 = document.querySelectorAll(".minicard");
 var items3 = document.querySelectorAll(".button");
-ScrollReveal().reveal(items, {
-    easing: 'ease-in-out',
-    distance: '20px'
+scrollreveal().reveal(items, {
+    easing: "ease-in-out",
+    distance: "20px"
 
 });
-ScrollReveal().reveal(items2, {
-    easing: 'ease-in-out',
-    distance: '20px'
+scrollreveal().reveal(items2, {
+    easing: "ease-in-out",
+    distance: "20px"
 
 });
-ScrollReveal().reveal(items3, {
-    easing: 'ease-in-out',
-    distance: '20px'
+scrollreveal().reveal(items3, {
+    easing: "ease-in-out",
+    distance: "20px"
 
 });

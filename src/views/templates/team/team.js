@@ -1,8 +1,7 @@
-import './team.scss'
-
-import "vanilla-tilt";
-import ScrollReveal from "scrollreveal";
-import smoothscroll from 'smoothscroll-polyfill';
+import "./team.scss"
+import vanillatilt from "vanilla-tilt";
+import scrollreveal from "scrollreveal";
+import smoothscroll from "smoothscroll-polyfill";
 smoothscroll.polyfill();
 
 function getCard(element)
@@ -11,13 +10,13 @@ function getCard(element)
     {
         return element;
     }
-    if(element.parentNode != undefined)
+    if(element.parentNode !== undefined)
     {
         var owner = element.parentNode;
     
-        while(owner != document.body)
+        while(owner !== document.body)
         {
-            if(owner != undefined && owner.classList.length > 0 && owner.classList.contains("human-card"))
+            if(owner !== undefined && owner.classList.length > 0 && owner.classList.contains("human-card"))
             {
                 return owner;
             }
@@ -28,7 +27,7 @@ function getCard(element)
     return null;
 }
 
-function Work()
+function work()
 {
     var isMobile = false; //initiate as false
     // device detection
@@ -41,7 +40,7 @@ function Work()
     var lastopened = null;
     for(var i = 0; i < items.length; i++)
     {
-        items[i].addEventListener('click', function(element){
+        items[i].addEventListener("click", function(element){
             if(this.classList.contains("open"))
             {
                 this.classList.remove("disp"); 
@@ -51,7 +50,7 @@ function Work()
             {
                 this.classList.add("disp"); 
                 this.classList.add("open");
-                if(lastopened != null && lastopened != this)
+                if(lastopened !== null && lastopened !== this)
                 {
                     lastopened.classList.remove("disp"); 
                     lastopened.classList.remove("open");
@@ -59,11 +58,11 @@ function Work()
                 lastopened = this;
                 if(isMobile)
                 {
-                    this.scrollIntoView({ block: 'center',  behavior: 'smooth', inline: 'center' });
+                    this.scrollIntoView({ block: "center",  behavior: "smooth", inline: "center" });
                 }
             }
         });
-        items[i].addEventListener('mouseleave', function(element){
+        items[i].addEventListener("mouseleave", function(element){
                 this.classList.remove("disp"); 
                 this.classList.remove("open");
         });
@@ -71,7 +70,7 @@ function Work()
 
     if(!isMobile & !isEdge)
     {
-        VanillaTilt.init(items, {
+        vanillatilt.init(items, {
             reverse:                true,  // reverse the tilt direction
             max:                    10,     // max tilt rotation (degrees)
             perspective:            1000,   // Transform perspective, the lower the more extreme the tilt gets.
@@ -93,20 +92,20 @@ function Work()
                     var elem = document.elementFromPoint(viewportwidth, viewportheight);
                     var newcard = getCard(elem);
                     
-                    if(newcard != null)
+                    if(newcard !== null)
                     {
-                        if(card != undefined && card.classList.contains("hover"))
+                        if(card !== undefined && card.classList.contains("hover"))
                         {
                             card.classList.remove("hover");
                         }
                         card = newcard;
-                        if (document.querySelector('body').classList.contains("nav-active") == false)
+                        if (document.querySelector("body").classList.contains("nav-active") === false)
                             card.classList.add("hover");
                         
                     }
                     else
                     {
-                        if(card != undefined && card.classList.contains("hover"))
+                        if(card !== undefined && card.classList.contains("hover"))
                         {
                             card.classList.remove("hover");
                             card.classList.remove("disp"); 
@@ -138,9 +137,9 @@ function Work()
             }
         }
     
-    ScrollReveal().reveal(items, {
-        easing: 'ease-in-out',
-        distance: '20px'
+    scrollreveal().reveal(items, {
+        easing: "ease-in-out",
+        distance: "20px"
     
     });
 
@@ -148,4 +147,4 @@ function Work()
     document.body.classList.add("nologo");
 }
 
-document.onload = Work();
+document.onload = work();

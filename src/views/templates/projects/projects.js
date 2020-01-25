@@ -1,9 +1,7 @@
-import './projects.scss'
+import "./projects.scss";
+import scrollreveal from "scrollreveal";
+import smoothscroll from "smoothscroll-polyfill";
 
-import ScrollReveal from "scrollreveal";
-import smoothscroll from 'smoothscroll-polyfill';
-
-// kick off the polyfill!
 smoothscroll.polyfill();
 
 document.body.classList.add("nologo");
@@ -51,27 +49,18 @@ window.onscroll = function()
             }
         };
 
-        function arrayRemove(arr, value) {
+var menuItems = document.querySelectorAll(".img_container");
 
-            return arr.filter(function(ele){
-                return ele != value;
-            });
-         
-         }
-
-
-var menuItems = document.querySelectorAll('.img_container');
-
-ScrollReveal().reveal(document.querySelectorAll('.container'), {
-    easing: 'ease-in-out',
-    distance: '20px'
+scrollreveal().reveal(document.querySelectorAll(".container"), {
+    easing: "ease-in-out",
+    distance: "20px"
 });
 
 function checkOpen (element2)
 {
     var found = false;
-    menuItems.forEach(element => {
-        if (element.parentNode.classList.contains("open") && element != element2)
+    menuItems.forEach((element) => {
+        if (element.parentNode.classList.contains("open") && element !== element2)
         {
             found = element;
         }
@@ -79,12 +68,10 @@ function checkOpen (element2)
     return found;
 }
 
-menuItems.forEach(element => {
+menuItems.forEach((element) => {
     element.onclick = function () {
-
-        console.log("image clicked");
         var lastopenened = checkOpen (element)
-        if(lastopenened != false)
+        if(lastopenened !== false)
         {
             lastopenened.parentNode.classList.remove("open");
         }
@@ -95,16 +82,16 @@ menuItems.forEach(element => {
         else
         {
             element.parentNode.classList.add("open");
-            if(lastopenened != false)
+            if(lastopenened !== false)
             {
                 setTimeout(function ()
                 {
-                    element.parentNode.scrollIntoView({ block: 'center',  behavior: 'smooth' });
+                    element.parentNode.scrollIntoView({ block: "center",  behavior: "smooth" });
                 }, 201)
             }
             else
             {
-                element.parentNode.scrollIntoView({ block: 'center',  behavior: 'smooth' });
+                element.parentNode.scrollIntoView({ block: "center",  behavior: "smooth" });
             }
         }
 

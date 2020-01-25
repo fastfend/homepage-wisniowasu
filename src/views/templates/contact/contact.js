@@ -1,10 +1,10 @@
-import './contact.scss'
+import "./contact.scss"
 
-import ScrollReveal from "scrollreveal";
+import scrollreveal from "scrollreveal";
 var items = document.querySelectorAll(".slideable");
-ScrollReveal().reveal(items, {
-    easing: 'ease-in-out',
-    distance: '20px'
+scrollreveal().reveal(items, {
+    easing: "ease-in-out",
+    distance: "20px"
 
 });
 
@@ -25,4 +25,4 @@ window.onscroll = function()
                     body.classList.remove("nav-bg");
                 }
             }
-        }
+        };
