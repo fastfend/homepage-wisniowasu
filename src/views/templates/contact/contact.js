@@ -1,4 +1,4 @@
-import "./contact.scss"
+import "./contact.scss";
 
 import scrollreveal from "scrollreveal";
 var items = document.querySelectorAll(".slideable");

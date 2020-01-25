@@ -1,4 +1,4 @@
-import "./team.scss"
+import "./team.scss";
 import vanillatilt from "vanilla-tilt";
 import scrollreveal from "scrollreveal";
 import smoothscroll from "smoothscroll-polyfill";
@@ -10,13 +10,13 @@ function getCard(element)
     {
         return element;
     }
-    if(element.parentNode !== undefined)
+    if(element.parentNode !== null)
     {
         var owner = element.parentNode;
     
         while(owner !== document.body)
         {
-            if(owner !== undefined && owner.classList.length > 0 && owner.classList.contains("human-card"))
+            if(owner !== null && owner.classList.length > 0 && owner.classList.contains("human-card"))
             {
                 return owner;
             }
@@ -38,9 +38,11 @@ function work()
     var isEdge = window.navigator.userAgent.indexOf("Edge") > -1;
     var items = document.querySelectorAll(".human-card");
     var lastopened = null;
-    for(var i = 0; i < items.length; i++)
+
+    function onClick() 
     {
-        items[i].addEventListener("click", function(element){
+        return function ()
+        {
             if(this.classList.contains("open"))
             {
                 this.classList.remove("disp"); 
@@ -61,11 +63,22 @@ function work()
                     this.scrollIntoView({ block: "center",  behavior: "smooth", inline: "center" });
                 }
             }
-        });
-        items[i].addEventListener("mouseleave", function(element){
-                this.classList.remove("disp"); 
-                this.classList.remove("open");
-        });
+        };
+    }
+
+    function onLeave()
+    {
+        return function ()
+        {
+            this.classList.remove("disp"); 
+            this.classList.remove("open");
+        };
+    }
+
+    for(var i = 0; i < items.length; i++)
+    {
+        items[parseInt(i)].addEventListener("click", onClick());
+        items[parseInt(i)].addEventListener("mouseleave", onLeave());
     }
 
     if(!isMobile & !isEdge)
@@ -94,26 +107,25 @@ function work()
                     
                     if(newcard !== null)
                     {
-                        if(card !== undefined && card.classList.contains("hover"))
+                        if(card !== null && card.classList.contains("hover"))
                         {
                             card.classList.remove("hover");
                         }
                         card = newcard;
                         if (document.querySelector("body").classList.contains("nav-active") === false)
+                        {
                             card.classList.add("hover");
-                        
+                        }                        
                     }
                     else
                     {
-                        if(card !== undefined && card.classList.contains("hover"))
+                        if(card !== null && card.classList.contains("hover"))
                         {
                             card.classList.remove("hover");
                             card.classList.remove("disp"); 
                             card.classList.remove("open");
                         }
-
                     }
-
                 }
                 catch (ex)
                 {
