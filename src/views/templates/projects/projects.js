@@ -37,7 +37,7 @@ function checkOpen(element2) {
 
 menuItems.forEach((element) => {
     element.onclick = function () {
-        var lastopenened = checkOpen(element)
+        var lastopenened = checkOpen(element);
         if (lastopenened !== false) {
             lastopenened.parentNode.classList.remove("open");
         }

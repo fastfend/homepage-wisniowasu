@@ -20,4 +20,4 @@ window.onscroll = function () {
             body.classList.remove("nav-bg");
         }
     }
-}
+};
