@@ -17,7 +17,7 @@ if (!isMobile) {
     'full-page-listening': true,
   });
 }
-
+document.body.classList.add('nologo');
 window.onscroll = function () {
   var viewH = window.innerHeight;
   var scrollPosition = document.scrollingElement.scrollTop;
