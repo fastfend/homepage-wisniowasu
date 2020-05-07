@@ -1,6 +1,6 @@
 {
   "name": "homepage-wisniowasu",
-  "version": "1.2.6",
+  "version": "1.2.8",
   "description": "Strona główna dla Samorządu Uczniowskiego na Wiśniowej 56 w Warszawie",
   "main": "index.js",
   "scripts": {
