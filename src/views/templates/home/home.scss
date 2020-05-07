@@ -150,6 +150,7 @@ $imageurl: url('../../../img/team/2019_20/team.jpg?size=1920');
   width: 100%;
   max-width: 1020px;
   margin: -20px 0;
+  overflow-x: hidden;
 }
 
 $imagew: image-width($imageurl);
