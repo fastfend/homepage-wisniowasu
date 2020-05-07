@@ -4,20 +4,19 @@ import '../scss/menu.scss';
 import 'progressive-image.js';
 import 'lazysizes';
 
-var app = (function () {
+function app() {
   var body = null;
   var menu = null;
-  var menuItems = null;
   var enableMenu = function enableMenu(element) {
     if (!element.classList.contains('nav-active')) {
       element.classList.add('nav-active');
       window.sessionStorage.setItem(
         'wisniowasu-menulastopened',
-        true,
+        true
       );
       window.sessionStorage.setItem(
         'wisniowasu-menulasttimetopened',
-        Date.now(),
+        Date.now()
       );
     }
   };
@@ -26,7 +25,7 @@ var app = (function () {
       element.classList.remove('nav-active');
       window.sessionStorage.setItem(
         'wisniowasu-menulastopened',
-        false,
+        false
       );
     }
   };
@@ -58,22 +57,22 @@ var app = (function () {
   var init = function init() {
     body = document.querySelector('body');
     menu = document.querySelector('.menu-icon');
-    menuItems = document.querySelectorAll('.nav__list-item');
     var opened = JSON.parse(
-      window.sessionStorage.getItem('wisniowasu-menulastopened'),
+      window.sessionStorage.getItem('wisniowasu-menulastopened')
     );
     var diff =
       Date.now() -
       JSON.parse(
         window.sessionStorage.getItem(
-          'wisniowasu-menulasttimetopened',
-        ),
+          'wisniowasu-menulasttimetopened'
+        )
       );
     var seconds = Math.floor(diff / 1000);
     if (opened && seconds < 120) {
-      //enableMenu(body);
+      // enableMenu(body);
     }
     applyListeners();
   };
   init();
-})();
+}
+app();

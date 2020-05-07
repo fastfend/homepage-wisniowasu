@@ -21,6 +21,17 @@
   "rules": {
     "prettier/prettier": ["error"],
     "semi": [2, "always"],
-    "comma-dangle": [2, "always"]
-  }
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always",
+        "objects": "always",
+        "imports": "always",
+        "exports": "always",
+        "functions": "never"
+      }
+    ],
+    "space-before-function-paren": 0
+  },
+  "plugins": ["eslint-plugin-prettier"]
 }
