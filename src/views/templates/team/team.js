@@ -28,11 +28,15 @@ function getCard(element) {
 }
 
 function work() {
-  // initiate as false
+  var isMobile = false;
   const deviceDetector = new DeviceDetector();
-  deviceDetector.parse(navigator.userAgent);
-  var isMobile = !deviceDetector.isDesktop;
-
+  var device = deviceDetector.parse(navigator.userAgent);
+  if (
+    device.device.type === 'tablet' ||
+    device.device.type === 'smartphone'
+  ) {
+    isMobile = true;
+  }
   var isEdge = window.navigator.userAgent.indexOf('Edge') > -1;
   var items = document.querySelectorAll('.human-card');
   var lastopened = null;

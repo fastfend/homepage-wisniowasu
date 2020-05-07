@@ -4,9 +4,15 @@ import scrollreveal from 'scrollreveal';
 import DeviceDetector from 'device-detector-js';
 
 // initiate as false
+var isMobile = false;
 const deviceDetector = new DeviceDetector();
-deviceDetector.parse(navigator.userAgent);
-var isMobile = !deviceDetector.isDesktop;
+var device = deviceDetector.parse(navigator.userAgent);
+if (
+  device.device.type === 'tablet' ||
+  device.device.type === 'smartphone'
+) {
+  isMobile = true;
+}
 
 if (!isMobile) {
   vanillatilt.init(document.querySelector('#logo'), {
