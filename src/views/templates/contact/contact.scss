@@ -1,82 +1,82 @@
 #contact_container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .smallbox {
+  margin: 20px;
+  width: 100%;
+  min-width: 220px;
+  max-width: 350px;
+  min-height: 460px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .title {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .links {
+    > a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin-top: 10px;
+      filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.2));
+      transition: all 0.1s ease-in-out;
+    }
+
+    @media (hover: hover) {
+      > a:hover {
+        filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
+      }
+    }
+
+    .instagram-icon {
+      background: url("../../../img/icons/icons8-instagram-50.png");
+      background-size: contain;
+    }
+
+    .facebook-icon {
+      background: url("../../../img/icons/icons8-facebook-50.png");
+      background-size: contain;
+    }
+
+    .discord-icon {
+      background: url("../../../img/icons/icons8-discord-new-logo-50.png");
+      background-size: contain;
+    }
+  }
+
+  .subtitle {
+    margin: 5px 0px 5px 0px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  & > div {
     margin: 20px;
-    width: 100%;
-    min-width: 220px;
-    max-width: 350px;
-    min-height: 460px;
-    background-color: white;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
-    .title {
-        margin: 0;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 20px;
-        font-family: 'Raleway', sans-serif;
-        color: rgba(0, 0, 0, 0.7)
-    }
-
-    .links {
-        >a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            margin-top: 10px;
-            filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.2));
-            transition: all 0.1s ease-in-out;
-        }
-
-        @media (hover: hover) {
-            >a:hover {
-                filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
-            }
-        }
-
-        .instagram-icon {
-            background: url("../../../img/icons/icons8-instagram-50.png");
-            background-size: contain;
-        }
-
-        .facebook-icon {
-            background: url("../../../img/icons/icons8-facebook-50.png");
-            background-size: contain;
-        }
-
-        .discord-icon {
-            background: url("../../../img/icons/icons8-discord-new-logo-50.png");
-            background-size: contain;
-        }
-    }
-
-    .subtitle {
-        margin: 5px 0px 5px 0px;
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 13px;
-        color: rgba(0, 0, 0, 0.8)
-    }
-
-    &>div {
-        margin: 20px;
-    }
+  }
 }
 
 iframe.discord {
-    min-width: 220px;
-    height: 500px;
-    margin: 20px;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  min-width: 220px;
+  height: 500px;
+  margin: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
