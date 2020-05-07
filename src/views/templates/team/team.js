@@ -101,8 +101,10 @@ function work() {
         var newcard = getCard(elem);
 
         if (newcard !== null) {
-          if (card !== null && card.classList.contains('hover')) {
-            card.classList.remove('hover');
+          if (card !== null && card !== undefined) {
+            if (card.classList.contains('hover')) {
+              card.classList.remove('hover');
+            }
           }
           card = newcard;
           if (
@@ -113,10 +115,12 @@ function work() {
             card.classList.add('hover');
           }
         } else {
-          if (card !== null && card.classList.contains('hover')) {
-            card.classList.remove('hover');
-            card.classList.remove('disp');
-            card.classList.remove('open');
+          if (card !== null && card !== undefined) {
+            if (card.classList.contains('hover')) {
+              card.classList.remove('hover');
+              card.classList.remove('disp');
+              card.classList.remove('open');
+            }
           }
         }
       } catch (ex) {
