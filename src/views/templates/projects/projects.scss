@@ -52,7 +52,7 @@
       border-radius: 20px;
       overflow: hidden;
       height: 250px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
       transition: transform 0.3s ease-in-out !important;
       transform: scale(1.075) !important;
       z-index: 1;
@@ -73,7 +73,7 @@
     }
 
     div.img_container::after {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       bottom: 0;
@@ -92,14 +92,14 @@
       display: flex;
       height: 230px;
       width: calc(100% - 40px);
-      top: 0px;
+      top: 0;
       left: 0;
       align-items: flex-end;
-      padding: 0px 20px 20px 20px;
+      padding: 0 20px 20px 20px;
       color: rgba(255, 255, 255, 1);
       font-size: 30px;
       font-weight: 700;
-      font-family: "Raleway";
+      font-family: 'Raleway', sans-serif;
       pointer-events: none;
       z-index: 1;
     }
@@ -110,8 +110,8 @@
       max-height: 1000px;
       color: rgba(0, 0, 0, 0.8);
       font-size: 14px;
-      transition: opacity 0.2s ease-in-out, max-height 0.2s ease-in-out,
-        padding 0.2s ease-in-out;
+      transition: opacity 0.2s ease-in-out,
+        max-height 0.2s ease-in-out, padding 0.2s ease-in-out;
       z-index: 0;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
       border-bottom-left-radius: 10px;

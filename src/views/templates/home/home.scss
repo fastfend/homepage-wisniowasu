@@ -1,9 +1,9 @@
-@import "../../../scss/shadows.scss";
+@import '../../../scss/shadows.scss';
 
-$imageurl: url("../../../img/team/2019_20/team.jpg?size=1920");
+$imageurl: url('../../../img/team/2019_20/team.jpg?size=1920');
 
 @function strip-unit($number) {
-  @if type-of($number) == "number" and not unitless($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
     @return $number / ($number * 0 + 1);
   }
 
@@ -102,7 +102,7 @@ $imageurl: url("../../../img/team/2019_20/team.jpg?size=1920");
 }
 
 .minicard {
-  @include shadow("nonclikable");
+  @include shadow('nonclikable');
   background-color: white;
   width: 260px;
   height: 420px;
@@ -122,8 +122,8 @@ $imageurl: url("../../../img/team/2019_20/team.jpg?size=1920");
   }
 
   &-title {
-    font-family: "Raleway";
-    margin: 20px 0px 20px 0px;
+    font-family: 'Raleway', sans-serif;
+    margin: 20px 0 20px 0;
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
@@ -157,10 +157,10 @@ $imageh: image-height($imageurl);
 $imagew_l: strip-unit($imagew);
 $imageh_l: strip-unit($imageh);
 
-@media (max-aspect-ratio: #{$imagew_l}/#{$imageh_l}) {
+@media (max-aspect-ratio: #{$imagew_l} / #{$imageh_l}) {
   #team_image {
     background-size: auto 100%;
-    width: calc(100vh /#{$imageh_l}*#{$imagew_l});
+    width: calc(100vh / #{$imageh_l} * #{$imagew_l});
     background-position: left;
     animation: movingbg 40s ease-in-out infinite;
     will-change: transform;
@@ -174,9 +174,11 @@ $imageh_l: strip-unit($imageh);
   }
 
   50% {
-    transform: translateX(calc(100vw - 100vh /#{$imageh_l}*#{$imagew_l}));
+    transform: translateX(
+      calc(100vw - 100vh / #{$imageh_l} * #{$imagew_l})
+    );
     -webkit-transform: translateX(
-      calc(100vw - 100vh /#{$imageh_l}*#{$imagew_l})
+      calc(100vw - 100vh / #{$imageh_l} * #{$imagew_l})
     );
   }
 
@@ -193,9 +195,11 @@ $imageh_l: strip-unit($imageh);
   }
 
   50% {
-    transform: translateX(calc(100vw - 100vh /#{$imageh_l}*#{$imagew_l}));
+    transform: translateX(
+      calc(100vw - 100vh / #{$imageh_l} * #{$imagew_l})
+    );
     -webkit-transform: translateX(
-      calc(100vw - 100vh /#{$imageh_l}*#{$imagew_l})
+      calc(100vw - 100vh / #{$imageh_l} * #{$imagew_l})
     );
   }
 
@@ -239,7 +243,7 @@ $imageh_l: strip-unit($imageh);
 }
 
 .card {
-  @include shadow("nonclikable");
+  @include shadow('nonclikable');
   margin-left: 20px;
   margin-right: 20px;
   background-color: white;
@@ -249,13 +253,13 @@ $imageh_l: strip-unit($imageh);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 70px auto auto;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
   overflow: hidden;
 
   &-image {
     grid-area: 1 / 1 / 4 / 2;
-    background-image: url("../../../img/team/2019_20/photo_20.jpg?size=920");
+    background-image: url('../../../img/team/2019_20/photo_20.jpg?size=920');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -319,7 +323,7 @@ $imageh_l: strip-unit($imageh);
     }
 
     div.img_container {
-      @include shadow("button");
+      @include shadow('button');
       position: relative;
       border-radius: 20px;
       overflow: hidden;
@@ -345,7 +349,7 @@ $imageh_l: strip-unit($imageh);
     }
 
     div.img_container::after {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       bottom: 0;
@@ -364,14 +368,14 @@ $imageh_l: strip-unit($imageh);
       display: flex;
       height: 130px;
       width: calc(100% - 40px);
-      top: 0px;
+      top: 0;
       left: 0;
       align-items: flex-end;
-      padding: 0px 20px 20px 20px;
+      padding: 0 20px 20px 20px;
       color: rgba(255, 255, 255, 1);
       font-size: 30px;
       font-weight: 700;
-      font-family: "Raleway";
+      font-family: 'Raleway', sans-serif;
       pointer-events: none;
       z-index: 1;
     }

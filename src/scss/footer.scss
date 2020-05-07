@@ -8,7 +8,7 @@ footer {
   margin: 80px 0 0 0;
   padding-bottom: 20px;
   background-color: whitesmoke;
-  box-shadow: 0px 0px 20px 20px whitesmoke;
+  box-shadow: 0 0 20px 20px whitesmoke;
 
   .logo {
     background-image: url(../img/logos/logo_title.png);
@@ -52,23 +52,23 @@ footer {
     }
 
     a.instagram {
-      background-image: url("../img/icons/icons8-instagram-100.png");
+      background-image: url('../img/icons/icons8-instagram-100.png');
     }
 
     a.facebook {
-      background-image: url("../img/icons/icons8-facebook-100.png");
+      background-image: url('../img/icons/icons8-facebook-100.png');
     }
 
     a.youtube {
-      background-image: url("../img/icons/icons8-play-button-100.png");
+      background-image: url('../img/icons/icons8-play-button-100.png');
     }
 
     a.discord {
-      background-image: url("../img/icons/icons8-discord-100.png");
+      background-image: url('../img/icons/icons8-discord-100.png');
     }
 
     a.status {
-      background-image: url("../img/icons/icons8-signal-100.png");
+      background-image: url('../img/icons/icons8-signal-100.png');
     }
   }
 

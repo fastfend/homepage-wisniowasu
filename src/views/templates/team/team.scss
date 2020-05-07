@@ -44,13 +44,13 @@
 .human-card {
   width: 300px;
   height: 400px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   margin: 20px;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 300px 100px;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
   transform-style: preserve-3d;
   border-radius: 5px;
   cursor: pointer;
@@ -60,19 +60,19 @@
       opacity: 1;
       background-color: white;
       margin-top: 19px;
-      transform: translate3d(0px, -6px, 30px);
+      transform: translate3d(0, -6px, 30px);
     }
 
     .info {
-      border-radius: 0px;
+      border-radius: 0;
       margin: 11px 11px 7px 11px !important;
       padding-bottom: 4px;
-      transform: translate3d(0px, -6px, 30px);
+      transform: translate3d(0, -6px, 30px);
 
       @supports (-ms-ime-align: auto) {
         margin: 11px 11px 11px 11px !important;
-        padding-bottom: 0px;
-        transform: translate3d(0px, 0px, 30px);
+        padding-bottom: 0;
+        transform: translate3d(0, 0, 30px);
       }
     }
   }
@@ -111,15 +111,15 @@
     z-index: 2;
     background-color: white;
     border-radius: 5px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 
     transition: all 0.2s ease-in-out;
 
     display: grid;
     grid-template-columns: 70px 1fr;
     grid-template-rows: auto;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
 
     overflow: hidden;
 
@@ -130,7 +130,7 @@
       padding: 15px;
       object-position: center;
       object-fit: contain;
-      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.15));
       pointer-events: none;
       overflow: hidden;
     }
@@ -147,7 +147,7 @@
 
     p {
       &.title {
-        font-family: "Raleway", sans-serif;
+        font-family: 'Raleway', sans-serif;
         margin: 0;
         font-size: 13px;
         font-weight: 600;
@@ -183,9 +183,9 @@
 
   &.hover {
     .info {
-      border-radius: 0px;
+      border-radius: 0;
       margin: 8px;
-      transform: translate3d(0px, 0px, 30px);
+      transform: translate3d(0, 0, 30px);
     }
 
     transform: scale(1.08) !important;
@@ -195,12 +195,12 @@
 @media (hover: hover) {
   .human-card:hover {
     .info {
-      border-radius: 0px;
+      border-radius: 0;
       margin: 11px;
-      transform: translate3d(0px, -6px, 30px);
+      transform: translate3d(0, -6px, 30px);
 
       @supports (-ms-ime-align: auto) {
-        transform: translate3d(0px, 0px, 30px);
+        transform: translate3d(0, 0, 30px);
       }
     }
 
@@ -222,10 +222,11 @@ p.category {
   text-decoration: none;
   -webkit-animation: tracking-in-contract 0.8s
     cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-contract 0.8s
+    cubic-bezier(0.215, 0.61, 0.355, 1) both;
 
   text-align: center;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0 20px 0;
   background: linear-gradient(288deg, #ff7f66, #de1444);
   background-clip: text;
   -webkit-background-clip: text;
