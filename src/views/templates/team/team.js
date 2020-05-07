@@ -2,7 +2,7 @@ import './team.scss';
 import vanillatilt from 'vanilla-tilt';
 import scrollreveal from 'scrollreveal';
 import smoothscroll from 'smoothscroll-polyfill';
-import DeviceDetector from 'device-detector-js';
+import getIsMobile from '../../../js/mobileExt';
 smoothscroll.polyfill();
 
 function getCard(element) {
@@ -28,15 +28,7 @@ function getCard(element) {
 }
 
 function work() {
-  var isMobile = false;
-  const deviceDetector = new DeviceDetector();
-  var device = deviceDetector.parse(navigator.userAgent);
-  if (
-    device.device.type === 'tablet' ||
-    device.device.type === 'smartphone'
-  ) {
-    isMobile = true;
-  }
+  var isMobile = getIsMobile();
   var isEdge = window.navigator.userAgent.indexOf('Edge') > -1;
   var items = document.querySelectorAll('.human-card');
   var lastopened = null;

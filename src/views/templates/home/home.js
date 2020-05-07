@@ -1,18 +1,10 @@
 import './home.scss';
 import vanillatilt from 'vanilla-tilt';
 import scrollreveal from 'scrollreveal';
-import DeviceDetector from 'device-detector-js';
+import getIsMobile from '../../../js/mobileExt';
 
 // initiate as false
-var isMobile = false;
-const deviceDetector = new DeviceDetector();
-var device = deviceDetector.parse(navigator.userAgent);
-if (
-  device.device.type === 'tablet' ||
-  device.device.type === 'smartphone'
-) {
-  isMobile = true;
-}
+var isMobile = getIsMobile();
 
 if (!isMobile) {
   vanillatilt.init(document.querySelector('#logo'), {
