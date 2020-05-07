@@ -1,11 +1,11 @@
-import './team.scss';
-import vanillatilt from 'vanilla-tilt';
-import scrollreveal from 'scrollreveal';
-import smoothscroll from 'smoothscroll-polyfill';
+import "./team.scss";
+import vanillatilt from "vanilla-tilt";
+import scrollreveal from "scrollreveal";
+import smoothscroll from "smoothscroll-polyfill";
 smoothscroll.polyfill();
 
 function getCard(element) {
-  if (element.classList.contains('human-card')) {
+  if (element.classList.contains("human-card")) {
     return element;
   }
   if (element.parentNode !== null) {
@@ -15,7 +15,7 @@ function getCard(element) {
       if (
         owner !== null &&
         owner.classList.length > 0 &&
-        owner.classList.contains('human-card')
+        owner.classList.contains("human-card")
       ) {
         return owner;
       }
@@ -39,28 +39,28 @@ function work() {
   ) {
     isMobile = true;
   }
-  var isEdge = window.navigator.userAgent.indexOf('Edge') > -1;
-  var items = document.querySelectorAll('.human-card');
+  var isEdge = window.navigator.userAgent.indexOf("Edge") > -1;
+  var items = document.querySelectorAll(".human-card");
   var lastopened = null;
 
   function onClick() {
     return function () {
-      if (this.classList.contains('open')) {
-        this.classList.remove('disp');
-        this.classList.remove('open');
+      if (this.classList.contains("open")) {
+        this.classList.remove("disp");
+        this.classList.remove("open");
       } else {
-        this.classList.add('disp');
-        this.classList.add('open');
+        this.classList.add("disp");
+        this.classList.add("open");
         if (lastopened !== null && lastopened !== this) {
-          lastopened.classList.remove('disp');
-          lastopened.classList.remove('open');
+          lastopened.classList.remove("disp");
+          lastopened.classList.remove("open");
         }
         lastopened = this;
         if (isMobile) {
           this.scrollIntoView({
-            block: 'center',
-            behavior: 'smooth',
-            inline: 'center',
+            block: "center",
+            behavior: "smooth",
+            inline: "center",
           });
         }
       }
@@ -69,14 +69,14 @@ function work() {
 
   function onLeave() {
     return function () {
-      this.classList.remove('disp');
-      this.classList.remove('open');
+      this.classList.remove("disp");
+      this.classList.remove("open");
     };
   }
 
   for (var i = 0; i < items.length; i++) {
-    items[parseInt(i, 10)].addEventListener('click', onClick());
-    items[parseInt(i, 10)].addEventListener('mouseleave', onLeave());
+    items[parseInt(i, 10)].addEventListener("click", onClick());
+    items[parseInt(i, 10)].addEventListener("mouseleave", onLeave());
   }
 
   if (!isMobile & !isEdge) {
@@ -104,22 +104,22 @@ function work() {
         var newcard = getCard(elem);
 
         if (newcard !== null) {
-          if (card !== null && card.classList.contains('hover')) {
-            card.classList.remove('hover');
+          if (card !== null && card.classList.contains("hover")) {
+            card.classList.remove("hover");
           }
           card = newcard;
           if (
             document
-              .querySelector('body')
-              .classList.contains('nav-active') === false
+              .querySelector("body")
+              .classList.contains("nav-active") === false
           ) {
-            card.classList.add('hover');
+            card.classList.add("hover");
           }
         } else {
-          if (card !== null && card.classList.contains('hover')) {
-            card.classList.remove('hover');
-            card.classList.remove('disp');
-            card.classList.remove('open');
+          if (card !== null && card.classList.contains("hover")) {
+            card.classList.remove("hover");
+            card.classList.remove("disp");
+            card.classList.remove("open");
           }
         }
       } catch (ex) {
@@ -131,20 +131,20 @@ function work() {
     var body = document.body;
 
     if (scrollPosition > 170) {
-      body.classList.add('nav-bg');
+      body.classList.add("nav-bg");
     } else {
-      if (body.classList.contains('nav-bg')) {
-        body.classList.remove('nav-bg');
+      if (body.classList.contains("nav-bg")) {
+        body.classList.remove("nav-bg");
       }
     }
   };
 
   scrollreveal().reveal(items, {
-    easing: 'ease-in-out',
-    distance: '20px',
+    easing: "ease-in-out",
+    distance: "20px",
   });
 
-  document.body.classList.add('nologo');
+  document.body.classList.add("nologo");
 }
 
 document.onload = work();

@@ -4,5 +4,13 @@
   "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "all",
-  "printWidth": 70
+  "printWidth": 70,
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }

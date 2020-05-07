@@ -1,21 +1,21 @@
-import './contact.scss';
-import scrollreveal from 'scrollreveal';
-var items = document.querySelectorAll('.slideable');
+import "./contact.scss";
+import scrollreveal from "scrollreveal";
+var items = document.querySelectorAll(".slideable");
 scrollreveal().reveal(items, {
-  easing: 'ease-in-out',
-  distance: '20px',
+  easing: "ease-in-out",
+  distance: "20px",
 });
 
-document.body.classList.add('nologo');
+document.body.classList.add("nologo");
 window.onscroll = function () {
   var scrollPosition = document.scrollingElement.scrollTop;
   var body = document.body;
 
   if (scrollPosition > 170) {
-    body.classList.add('nav-bg');
+    body.classList.add("nav-bg");
   } else {
-    if (body.classList.contains('nav-bg')) {
-      body.classList.remove('nav-bg');
+    if (body.classList.contains("nav-bg")) {
+      body.classList.remove("nav-bg");
     }
   }
 };
