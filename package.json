@@ -1,6 +1,6 @@
 {
   "name": "homepage-wisniowasu",
-  "version": "1.2.8",
+  "version": "1.3.0",
   "description": "Strona główna dla Samorządu Uczniowskiego na Wiśniowej 56 w Warszawie",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "file-loader": "^4.3.0",
     "glob": "^7.1.6",
-    "handlebars": "^4.7.2",
+    "handlebars": "^4.7.6",
     "handlebars-loader": "^1.7.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
@@ -43,7 +43,7 @@
     "imagemin-svgo": "^7.0.0",
     "imagemin-webpack": "^5.1.1",
     "mini-css-extract-plugin": "^0.8.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "prettier": "^2.0.5",
     "responsive-loader": "^1.2.0",
@@ -52,7 +52,7 @@
     "style-loader": "^1.1.3",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1"
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "autoprefixer": "^9.7.4",
@@ -62,8 +62,8 @@
     "imagemin": "^7.0.1",
     "imagemin-webp": "^5.1.0",
     "imagemin-webpack-plugin": "^2.4.2",
-    "jquery": "^3.4.1",
-    "lazysizes": "^5.2.0",
+    "jquery": "^3.5.1",
+    "lazysizes": "^5.2.2",
     "load-google-maps-api": "^2.0.1",
     "mobile-detect": "^1.4.4",
     "node-sass-asset-functions": "^0.1.0",
