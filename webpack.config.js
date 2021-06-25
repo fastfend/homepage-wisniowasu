@@ -198,6 +198,15 @@ module.exports = {
       minify: htmlMinifyOptions,
     }),
     new HtmlWebPackPlugin({
+      title: 'Zespoł 2020/2021 - Wiśniowa SU | Samorząd Uczniowski',
+      desc: 'Skład zespołu SU w roku 2019/20',
+      template: './src/views/templates/team/team_2020_2021.hbs',
+      filename: './team_2020_2021/index.html',
+      chunks: ['main', 'team'],
+      version: json.version,
+      minify: htmlMinifyOptions,
+    }),
+    new HtmlWebPackPlugin({
       title: 'Dla ucznia - Wiśniowa SU | Samorząd Uczniowski',
       desc:
         'Materiały oraz usługi przeznaczone dla uczniów Wiśniowej',
