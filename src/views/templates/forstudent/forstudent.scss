@@ -34,6 +34,28 @@ $colour2: #de1444;
   background-image: linear-gradient(90deg, #ff512f, #dd2476);
 }
 
+.service-card.soon::before {
+  content: 'Już wkrótce';
+  position: absolute;
+  width: 120px;
+  height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+  background-color: red;
+  display: inline-block;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 50px;
+  transform: translate(-40px, -5px) rotate(-45deg);
+  background-image: linear-gradient(90deg, #ff512f, #dd2476);
+}
+
 .service-card {
   display: flex;
   flex-direction: column;

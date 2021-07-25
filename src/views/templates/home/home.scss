@@ -253,7 +253,7 @@ $imageh_l: strip-unit($imageh);
   background-color: white;
   border-radius: 20px;
   width: 100%;
-  max-width: 980px;
+  max-width: 1080px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 70px auto auto;
@@ -263,7 +263,7 @@ $imageh_l: strip-unit($imageh);
 
   &-image {
     grid-area: 1 / 1 / 4 / 2;
-    background-image: url('../../../img/team/2019_20/photo_20.jpg?size=920');
+    background-image: url('../../../img/team/2021_22/alt_team.jpg?size=920');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
