@@ -267,7 +267,7 @@ $imageh_l: strip-unit($imageh);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-width: 400px;
+    aspect-ratio: 920/613;
   }
 
   &-text {
@@ -288,11 +288,11 @@ $imageh_l: strip-unit($imageh);
     font-size: 35px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     grid-template-rows: auto auto auto;
 
     &-image {
-      min-height: 350px;
+      min-height: 200px;
       grid-area: 1 / 1 / 2 / 3;
     }
 
