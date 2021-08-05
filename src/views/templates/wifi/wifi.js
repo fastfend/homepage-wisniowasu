@@ -21,11 +21,10 @@ window.onscroll = function () {
   }
 };
 
-var eventDate = new Date(2021, 8, 1, 8, 0);
+var eventDate = new Date(2021, 8, 27, 9, 0);
 
 function updateCountdownText() {
-  var prefix = 'Czas do wydarzenia: ';
-  var updatedText = prefix;
+  var updatedText = 'Czas do wydarzenia: ';
   var currentDate = new Date().getTime();
 
   var timeLeft = eventDate - currentDate;
@@ -57,9 +56,13 @@ function updateCountdownText() {
 
   document.getElementById('countdown').innerHTML = updatedText;
 
-  // if (timeLeft < 0) {
-  //   document.getElementById('countdown').innerHTML = 'nie wiem co tu napisac xd' 
-  // }
+  if (timeLeft < 0) {
+    document.getElementById('countdown').innerHTML = 'Zapraszamy do wzięcia udziału!' 
+  }
+  if (timeLeft < -1000 * 60 * 60 * 12) {
+    document.getElementById('countdown').innerHTML = 'Kolejna edycja już wkrótce!' 
+  }
+
 }
 
 updateCountdownText();
