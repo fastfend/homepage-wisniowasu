@@ -29,6 +29,7 @@ module.exports = {
     forstudent: './src/views/templates/forstudent/forstudent.js',
     contact: './src/views/templates/contact/contact.js',
     projects: './src/views/templates/projects/projects.js',
+    wifi: './src/views/templates/wifi/wifi.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -199,7 +200,7 @@ module.exports = {
     }),
     new HtmlWebPackPlugin({
       title: 'Zespoł 2020/2021 - Wiśniowa SU | Samorząd Uczniowski',
-      desc: 'Skład zespołu SU w roku 2019/20',
+      desc: 'Skład zespołu SU w roku 2020/21',
       template: './src/views/templates/team/team_2020_2021.hbs',
       filename: './team_2020_2021/index.html',
       chunks: ['main', 'team'],
@@ -231,6 +232,15 @@ module.exports = {
       template: './src/views/templates/contact/contact.hbs',
       filename: './contact/index.html',
       chunks: ['main', 'contact'],
+      version: json.version,
+      minify: htmlMinifyOptions,
+    }),
+    new HtmlWebPackPlugin({
+      title: 'WiFI - Wiśniowa SU | Samorząd Uczniowski',
+      desc: 'PLACEHOLDER',
+      template: './src/views/templates/wifi/wifi.hbs',
+      filename: './wifi/index.html',
+      chunks: ['main', 'wifi'],
       version: json.version,
       minify: htmlMinifyOptions,
     }),
