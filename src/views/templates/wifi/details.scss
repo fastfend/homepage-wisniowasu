@@ -1,0 +1,19 @@
+@import "../../../scss/wifi_header.scss";
+
+.soon {
+    font-size: 20px;
+    animation-name: fade-in;
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
