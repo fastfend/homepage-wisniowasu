@@ -1,4 +1,5 @@
-@import '../../../scss/shadows.scss';
+@import "../../../scss/shadows.scss";
+@import "../../../scss/wifi_header.scss";
 $colour1: #ff7f66;
 $colour2: #de1444;
 
@@ -12,8 +13,57 @@ $colour2: #de1444;
   font-size: 28px;
 }
 
-#top_spacer {
-  transform: translateY(30px);
+#wifi-logo {
+  height: 200px;
+}
+
+.no-margin {
+  margin: 0;
+  padding: 0;
+}
+
+.gradient-button {
+  margin: 20px auto;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 1em 3em;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  background: linear-gradient(90deg, $colour1, $colour2);
+}
+
+.gradient-button::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  z-index: -1;
+  filter: blur(5px);
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(90deg, $colour1, $colour2);
+}
+
+@media (hover: hover) {
+  .gradient-button:hover {
+    transform: scale(1.1);
+  }
+
+  .btn:hover::before {
+    filter: blur(10px);
+    opacity: 0.9;
+  }
 }
 
 .spacer_container {
@@ -29,7 +79,7 @@ $colour2: #de1444;
 }
 
 .minicard {
-  @include shadow('nonclikable');
+  @include shadow("nonclikable");
   background-color: white;
   width: 280px;
   height: 420px;
@@ -49,7 +99,7 @@ $colour2: #de1444;
   }
 
   &-title {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     margin: 20px 0 20px 0;
     font-size: 18px;
     font-weight: 600;
@@ -85,7 +135,7 @@ $colour2: #de1444;
 }
 
 .card {
-  @include shadow('nonclikable');
+  @include shadow("nonclikable");
   margin-left: 20px;
   margin-right: 20px;
   background-color: white;
@@ -101,7 +151,7 @@ $colour2: #de1444;
 
   &-image {
     grid-area: 1 / 1 / 4 / 2;
-    background-image: url('../../../img/team/2021_22/alt_team.jpg?size=920');
+    background-image: url("../../../img/team/2021_22/alt_team.jpg?size=920");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -165,7 +215,7 @@ $colour2: #de1444;
     }
 
     div.img_container {
-      @include shadow('button');
+      @include shadow("button");
       position: relative;
       border-radius: 10px;
       overflow: hidden;
@@ -191,18 +241,13 @@ $colour2: #de1444;
     }
 
     div.img_container::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(
-        7deg,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(100, 100, 100, 0) 60%,
-        rgba(255, 255, 255, 0) 100%
-      );
+      background: linear-gradient(7deg, rgba(0, 0, 0, 1) 0%, rgba(100, 100, 100, 0) 60%, rgba(255, 255, 255, 0) 100%);
     }
 
     .button-text {
@@ -217,7 +262,7 @@ $colour2: #de1444;
       color: rgba(255, 255, 255, 1);
       font-size: 30px;
       font-weight: 700;
-      font-family: 'Raleway', sans-serif;
+      font-family: "Raleway", sans-serif;
       pointer-events: none;
       z-index: 1;
     }

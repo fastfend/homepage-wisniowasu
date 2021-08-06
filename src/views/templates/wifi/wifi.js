@@ -37,7 +37,6 @@ function updateCountdownText() {
   var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((timeLeft % (1000 * 60)) / (1000));
 
-
   if (days > 2) {
     updatedText += days + ' dni';
   } else if (days > 0) {
