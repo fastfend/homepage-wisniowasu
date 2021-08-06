@@ -15,9 +15,9 @@ $wifi_header_height: 75px;
     background-color: #de1444;
     border-radius: 0 0 $wifi_header_height $wifi_header_height;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1080px) {
         flex-flow: column wrap;
-        height: 110px;
+        height: auto;
         border-radius: 0 0 50px 50px;
     }
 }
