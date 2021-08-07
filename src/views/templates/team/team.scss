@@ -142,6 +142,9 @@
       justify-content: center;
       align-content: flex-start;
       align-items: flex-start;
+      // fixes a weird bug when sometimes the height doesn't automatically set
+      // to 70px and stays 100px until hover event happens
+      height: 70px;
       padding-left: 10px;
     }
 
