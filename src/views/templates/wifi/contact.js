@@ -20,3 +20,30 @@ window.onscroll = function () {
     }
   }
 };
+
+var form = document.getElementById('form');
+
+function sendMail(e) {
+  e.preventDefault();
+  let form = {
+    name,
+    subject,
+    email,
+    message,
+  }
+
+  form.name = e.target.name.value;
+  form.title = e.target.subject.value;
+  form.email = e.target.email.value;
+  form.message = e.target.message.value;
+
+  fetch("https://api.wisniowasu.pl/mailer/sendmail", {
+			method: "post",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(form),
+		});
+}
+
+form.addEventListener('submit', sendMail);

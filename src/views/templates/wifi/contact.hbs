@@ -6,12 +6,43 @@
     </h1>
 </div>
 {{> wifi_header}}
-<h2 class="section_topic">W każdym domu powinien być przynajmniej jeden</h2>
+<h2 class="section_topic alt-mobile-anim">W każdym domu powinien być przynajmniej jeden</h2>
 <div class="pageblock-full">
     <img src="../../../img/icons/kontakt.jpg" alt="kontakt" class="image">
 </div>
 <div class="pageblock-full">
     <h3 class="soon">koniecznie z uziemieniem</h3>
 </div>
+
+<form class="contact-container" id="form">
+    <fieldset class="contact-form">
+        <legend class="contact-form__legend">Kontakt</legend>
+        <label class="contact-form__label" for="name">Imię i nazwisko</label>
+        <span class="contact-form__input">
+            <img class="contact-form__input__icon" src="../../../img/icons/icons8-user-100.png" alt="Imię">
+            <input class="contact-form__input__field" type="text" name="name" id="name" placeholder="Karol Wojtyła">
+        </span>
+        <label class="contact-form__label" for="subject">Temat wiadomości</label>
+        <span class="contact-form__input">
+            <img class="contact-form__input__icon" src="../../../img/icons/icons8-pencil-drawing-100.png" alt="Temat">
+            <input class="contact-form__input__field" type="text" name="subject" id="subject" placeholder="Temat">
+        </span>
+        <label class="contact-form__label" for="email">Adres e-mail</label>
+        <span class="contact-form__input">
+            <img class="contact-form__input__icon" src="../../../img/icons/icons8-mail-100.png" alt="Adres"
+                aria-required="true">
+            <input class="contact-form__input__field" type="email" name="email" id="email"
+                placeholder="email@example.com">
+        </span>
+        <label class="contact-form__label" for="content">Treść wiadomości</label>
+        <textarea class="contact-form__message" name="message" id="message" placeholder="..."></textarea>
+        {{!-- <input type="button" name="submit" id="submit" value="Wyślij"> --}}
+        <span class="contact-form__button">
+            <button class="contact-form__button__btn" type="submit" name="submit" id="submit">Wyślij
+                <img class="contact-form__button__icon" src="../../../img/icons/icons8-email-send-100.png" alt="Wyślij">
+            </button>
+        </span>
+    </fieldset>
+</form>
 {{> footer }}
 {{/main}}
