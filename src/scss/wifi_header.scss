@@ -15,7 +15,7 @@ $wifi_header_height: 75px;
     background-color: #de1444;
     border-radius: 0 0 $wifi_header_height $wifi_header_height;
 
-    @media (max-width: 1080px) {
+    @media (max-width: 900px) {
         flex-flow: column wrap;
         height: auto;
         border-radius: 0 0 50px 50px;
@@ -42,6 +42,7 @@ $rounded_buttons: false;
 } @else {
     .wifi-header__button {
         margin: 0 20px;
+        padding: 10px;
         min-width: 50px;
         color: white;
         text-decoration: none;
@@ -50,6 +51,10 @@ $rounded_buttons: false;
         font-weight: 500;
         transition: all 0.2s ease;
         cursor: pointer;
+
+        @media (max-width: 900px) {
+            margin-bottom: .2em;
+        }
     }
 
     .vertical-spacer {
@@ -72,20 +77,24 @@ $rounded_buttons: false;
         transform: scale(1.1);
         background-color: #b9143b;
         border-radius: 10px;
-        padding: 10px;
     }
 }
 
 .wifi-header__home-button {
     display: block;
-    background-image: url('../img/logos/logo_wifi_2021_cropped.png');
-    background-size: 80px;
+    background-image: url('../img/logos/logo_wifi_2021_monochrome.png');
+    background-size: 70px;
     background-repeat: no-repeat;
     background-position: center center;
     height: 70px;
     width: 80px;
     transition: all 0.2s ease;
     cursor: pointer;
+
+    @media (max-width: 900px) {
+        margin: 0.2em 0 -0.2em;
+        background-size: 80px;
+    }
 }
 
 @media (hover: hover) {
