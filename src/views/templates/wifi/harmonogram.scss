@@ -29,6 +29,10 @@ $colour2: #de1444;
     margin: 50px 10px 0 10px;
     max-width: 1000px;
 
+    @media (max-width: 900px) {
+        grid-template-columns: 100px 1fr;
+    }
+
     &__timespan {
         display: flex;
         align-items: center;
@@ -40,9 +44,14 @@ $colour2: #de1444;
         //background-color: #ff7f66;
         background: linear-gradient(135deg, $colour1, $colour2);
         color: white;
+        text-align: center;
         font-size: 18px;
         font-weight: 500;
         text-shadow: 0 0 14px rgba(0, 0, 0, 0.5);
+
+        @media (max-width: 900px) {
+            font-size: 16px;
+        }
     }
 
     &__section {
@@ -75,7 +84,7 @@ $colour2: #de1444;
         margin: 0;
         color: #363636;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 1.2rem;
     }
 
 }
