@@ -4,7 +4,7 @@
   "description": "Strona główna dla Samorządu Uczniowskiego na Wiśniowej 56 w Warszawie",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --host 127.0.0.1",
+    "dev": "webpack-dev-server --host 0.0.0.0",
     "dev:open": "webpack-dev-server --host 127.0.0.1 --open",
     "build": "webpack",
     "fix-code": "prettier-eslint --write 'src/**/*.{js,jsx}' ",
