@@ -6,8 +6,8 @@ $wifi_header_height: 75px;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    //position: sticky;
-    //top: 0;
+    position: sticky;
+    top: 0;
     //-10px on top to move closer to the header
     margin: -10px auto 0 auto;
     max-width: 1000px;
