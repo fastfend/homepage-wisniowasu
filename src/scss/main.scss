@@ -59,6 +59,13 @@ h3 {
   }
 }
 
+// when the text is long use this class to avoid weird behaviour on mobile
+.alt-mobile-anim {
+  @media (max-width: 900px) {
+    animation: fade 1s ease-out;
+  }
+}
+
 @keyframes tracking-in-contract {
   0% {
     letter-spacing: 1em;
@@ -71,6 +78,16 @@ h3 {
 
   100% {
     letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
     opacity: 1;
   }
 }
