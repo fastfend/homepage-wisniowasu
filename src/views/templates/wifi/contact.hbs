@@ -13,7 +13,6 @@
 <div class="pageblock-full">
     <h3 class="soon">koniecznie z uziemieniem</h3>
 </div>
-
 <form class="contact-container" id="form">
     <fieldset class="contact-form">
         <legend class="contact-form__legend">Kontakt</legend>
@@ -27,15 +26,16 @@
             <img class="contact-form__input__icon" src="../../../img/icons/icons8-pencil-drawing-100.png" alt="Temat">
             <input class="contact-form__input__field" type="text" name="subject" id="subject" placeholder="Temat">
         </span>
-        <label class="contact-form__label" for="email">Adres e-mail</label>
+        <label class="contact-form__label" for="email">Adres e-mail<span class="contact-form__required"></span></label>
         <span class="contact-form__input">
             <img class="contact-form__input__icon" src="../../../img/icons/icons8-mail-100.png" alt="Adres"
                 aria-required="true">
             <input class="contact-form__input__field" type="email" name="email" id="email"
-                placeholder="email@example.com">
+                placeholder="email@example.com" required>
         </span>
-        <label class="contact-form__label" for="content">Treść wiadomości</label>
-        <textarea class="contact-form__message" name="message" id="message" placeholder="..."></textarea>
+        <label class="contact-form__label" for="content">Treść wiadomości<span
+                class="contact-form__required"></span></label>
+        <textarea class="contact-form__message" name="message" id="message" placeholder="..." required></textarea>
         {{!-- <input type="button" name="submit" id="submit" value="Wyślij"> --}}
         <span class="contact-form__button">
             <button class="contact-form__button__btn" type="submit" name="submit" id="submit">Wyślij
@@ -44,5 +44,13 @@
         </span>
     </fieldset>
 </form>
+<aside class="modal" id="modal">
+    <button class="modal__close-button" id="modal_close_btn"></button>
+    <img src="../../../img/icons/icons8-approval-100.png" alt="Ikonka sukces" class="modal__icon" id="js_modal_icon_success">
+    <img src="../../../img/icons/icons8-cancel-100.png" alt="Ikonka niepowodzenie" class="modal__icon" id="js_modal_icon_fail">
+    <h2 class="modal__header" id="js_modal_header">Poszło!</h2>
+    <p class="modal__message" id="js_modal_message">Dzięki za kontakt! Odezwiemy się wkrótce ;)</p>
+</aside>
+<div class="modal__background-overlay" id="modal_overlay"></div>
 {{> footer }}
 {{/main}}
