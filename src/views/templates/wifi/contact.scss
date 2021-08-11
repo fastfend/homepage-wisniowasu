@@ -104,7 +104,7 @@ $color2: #de1444;
 
     &__required::after {
         content: " (wymagane)";
-        display: inline;    
+        display: inline;
         color: gray;
         font-size: 0.8em;
     }
@@ -165,7 +165,7 @@ $color2: #de1444;
         width: 2.5em;
         height: 2.5em;
         transition: all 100ms ease-out;
-        filter: opacity(0.7); 
+        filter: opacity(0.7);
     }
 
     @media (hover: hover) {
@@ -222,12 +222,74 @@ $color2: #de1444;
     }
 
     &__background-overlay.active {
-        display: block;       
+        display: block;
+    }
+}
+
+.contact-card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 1rem 1rem 2rem;
+    max-width: 60ch;
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
+    border-radius: 10px;
+
+    @media (min-width: 600px) {
+        margin: 1rem auto 2rem;
+    }
+
+    &__title {
+        //ext-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+        color: #363636;
+        font-weight: 600;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+
+        &__instagram {
+            background-image: url("../../../img/icons/icons8-instagram-100.png");
+        }
+
+        &__facebook {
+            background-image: url("../../../img/icons/icons8-facebook-100.png");
+        };
+
+        &__youtube {
+            background-image: url("../../../img/icons/icons8-youtube-100.png");
+        }
+
+        a {
+            display: block;
+            height: 50px;
+            width: 50px;
+            margin: 0 0.5rem;
+            background-size: contain;
+            transition: all 100ms ease-out;
+        }
+        @media (hover: hover) {
+            a {
+                filter: grayscale(1);
+            }
+            a:hover {
+                filter: grayscale(0);
+                transform: scale(1.1);
+            }
+        }
     }
 }
 
 .modal.active {
     display: grid;
+}
+
+a {
+    color: #3080e0;
+    text-decoration: none;
 }
 
 .soon {
@@ -258,7 +320,7 @@ $color2: #de1444;
         opacity: 0;
     }
     to {
-        transform: translate(-50%, -50%)    scale(1);
+        transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
 }

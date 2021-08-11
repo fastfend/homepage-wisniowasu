@@ -57,7 +57,7 @@ $rounded_buttons: false;
 
         @media (max-width: 900px) {
             padding: 0;
-            margin-bottom: .2em;
+            margin-bottom: 0.2em;
         }
     }
 
@@ -87,7 +87,7 @@ $rounded_buttons: false;
 .wifi-header__home-button {
     display: block;
     margin-right: 10px;
-    background-image: url('../img/logos/logo_wifi_2021_monochrome.png');
+    background-image: url("../img/logos/logo_wifi_2021_monochrome.png");
     background-size: 70px;
     background-repeat: no-repeat;
     background-position: center center;
