@@ -30,10 +30,13 @@
   margin-right: 20px;
 
   div.date {
-    height: 80px;
-    margin-left: 64px;
+    //changes allow multiline dates on mobile
+    //height: 80px;
+    //margin-left: 64px;
+    height: auto;
+    margin: 25px 0 25px 64px;
     font-size: 26px;
-    line-height: 80px;
+    //line-height: 80px;
     vertical-align: middle;
     font-weight: 700;
     color: rgba(0, 0, 0, 0.3);
