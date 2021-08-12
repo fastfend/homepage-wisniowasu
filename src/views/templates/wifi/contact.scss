@@ -5,6 +5,7 @@ $color2: #de1444;
 .contact-form {
     display: flex;
     flex-flow: column nowrap;
+    align-items: stretch;
     margin: 1rem;
     padding: 0 1rem 1rem 1rem;
     background-color: white;
@@ -63,7 +64,8 @@ $color2: #de1444;
         margin: 0 0.5em 0.5em;
         // for some reason margin doesn't work correctly
         // on the right side on some mobile browsers
-        width: calc(100% - 1.5rem);
+        //width: calc(100% - 1.5rem);
+        width: 100%;
         border: 1px solid #bbb;
         border-radius: 5px;
         //box-shadow: inset 0 2px 3px rgba($color: #000000, $alpha: 0.2);
@@ -260,7 +262,7 @@ $color2: #de1444;
 
         &__facebook {
             background-image: url("../../../img/icons/icons8-facebook-100.png");
-        };
+        }
 
         &__youtube {
             background-image: url("../../../img/icons/icons8-youtube-100.png");
@@ -293,6 +295,10 @@ $color2: #de1444;
 a {
     color: #3080e0;
     text-decoration: none;
+}
+
+.flex-container {
+    display: flex;
 }
 
 .soon {
