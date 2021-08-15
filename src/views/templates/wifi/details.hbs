@@ -5,10 +5,48 @@
         Sczegóły wydarzenia
     </h1>
 </div>
-{{> wifi_header}}
-<h2 class="section_topic alt-mobile-anim">Tu na razie nic nie ma</h2>
+{{> wifi_header active_wifi_details=true}}
+<h2 class="section_topic alt-mobile-anim">Poznaj listę atrakcji</h2>
 <div class="pageblock-full">
-    <h3 class="soon">ale niedługo będzie</h3>
+    <h3 class="sub-header">i ich organizatorów</h3>
 </div>
+<section class="info-card">
+    {{!-- <img src="../../../img/wifi/grupowe_1.jpg" alt="zdjęcie organizatorów" class="info-card__image"> --}}
+    <div class="info-card__image image1"></div>
+    <p class="info-card__image-caption">
+        Imiona organizatorów<br>
+        <span class="caption">to co organizują</span>
+    </p>
+    <article class="info-card__content">
+        <h3 class="info-card__header">Escape room</h3>
+        <p class="info-card__text">Jest to wydarzenie, które stawia przed uczestnikami serie zadań wymagających
+            współpracy i logicznego myślenia. Ma na celu poznać uczestników ze sobą nawzajem oraz umożliwić im
+            nawiązanie kontaktów międzyoddziałowych.</p>
+    </article>
+</section>
+<section class="info-card">
+    <div class="info-card__image image2" style="--offset-y: 40%;"></div>
+    <p class="info-card__image-caption">
+        Imiona organizatorów<br>
+        <span class="caption">to co organizują</span>
+    </p>
+    <article class="info-card__content">
+        <h3 class="info-card__header">Scena główna</h3>
+        <p class="info-card__text">Scena ze specjalnym harmonogramem wydarzeń, mająca stanowić centrum wydarzeń i
+            miejsce integracji oraz rozrywki dla wszystkich uczestników festiwalu.</p>
+    </article>
+</section>
+<section class="info-card">
+    <div class="info-card__image image3"></div>
+    <p class="info-card__image-caption">
+        Imiona organizatorów<br>
+        <span class="caption">to co organizują</span>
+    </p>
+    <article class="info-card__content">
+        <h3 class="info-card__header">Doświadczenia chemiczne</h3>
+        <p class="info-card__text">Wydzielony obszar w którym, w bezpieczny sposób, uczniowie będą mogli zobaczyć
+            najciekawsze doświadczenia chemiczne przeprowadzone przez studentów z politechniki.</p>
+    </article>
+</section>
 {{> footer }}
 {{/main}}
