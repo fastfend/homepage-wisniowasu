@@ -59,6 +59,12 @@ $rounded_buttons: false;
             padding: 0;
             margin-bottom: 0.2em;
         }
+
+        // &.active {
+        //     font-weight: 600;
+        //     // text-decoration: underline;
+        //     border-bottom: 1px solid white;
+        // }
     }
 
     .vertical-spacer {
@@ -100,6 +106,10 @@ $rounded_buttons: false;
         margin: 0.2em 0 -0.2em;
         background-size: 80px;
     }
+
+    // &.active {
+    //     border-bottom: 2px solid white;
+    // }
 }
 
 @media (hover: hover) {
