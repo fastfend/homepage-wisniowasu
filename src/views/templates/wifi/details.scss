@@ -52,12 +52,20 @@
         color: #363636;
         font-size: 3em;
         font-weight: 700;
-        text-align: left;
+        text-align: center;
+
+        @media (min-width: 600px) {
+            text-align: left;
+        }
     }
 
     &__text {
         font-size: 1.2em;
-        text-align: justify;
+        text-align: center;
+
+        @media (min-width: 600px) {
+            text-align: left;
+        }
     }
 }
 
