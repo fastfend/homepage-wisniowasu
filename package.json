@@ -57,6 +57,7 @@
   "dependencies": {
     "autoprefixer": "^9.7.4",
     "device-detector-js": "^2.2.1",
+    "flickity": "^2.2.2",
     "handlebars-helpers": "^0.10.0",
     "image-maxsize-webpack-loader": "^1.1.1",
     "imagemin": "^7.0.1",

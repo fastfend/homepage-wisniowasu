@@ -1,94 +1,144 @@
-@import "../../../scss/wifi_header.scss";
+@import '../../../scss/wifi_header.scss';
+@import './flickity.css';
 
 .info-card {
-    display: grid;
-    // grid-template-rows: 250px 5em 1fr;
-    // grid-template-areas: "image" "caption" "content";
-    grid-template-rows: 1fr 250px 5em;
-    grid-template-areas: "content" "image" "caption";
-    margin: 1rem;
-    background-color: white;
-    border-radius: 25px;
-    overflow: hidden;
+  display: grid;
+  // grid-template-rows: 250px 5em 1fr;
+  // grid-template-areas: "image" "caption" "content";
+  grid-template-rows: 1fr 250px 5em;
+  grid-template-areas: 'content' 'image' 'caption';
+  margin: 1rem;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+
+  @media (min-width: 600px) {
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: 1fr 5em;
+    grid-template-areas:
+      'image content'
+      'caption content';
+  }
+
+  &__image {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 
     @media (min-width: 600px) {
-        max-width: 1000px;
-        margin: 1.5rem auto;
-        grid-template-columns: 500px 1fr;
-        grid-template-rows: 1fr 5em;
-        grid-template-areas:
-            "image content"
-            "caption content";
+      height: 300px;
+      background-position-y: var(--offset-y, 60%);
+      border-end-end-radius: 25px;
     }
 
-    &__image {
-        background-size: cover;
-
-        @media (min-width: 600px) {
-            height: 300px;
-            background-position-y: var(--offset-y, 60%);
-            border-end-end-radius: 25px;
-        }
-
-        &.image1 {background-image: url("../../../img/wifi/grupowe_1.jpg");}
-        &.image2 {background-image: url("../../../img/wifi/grupowe_2.jpg");}
-        &.image3 {background-image: url("../../../img/wifi/grupowe_3.jpg");}
+    &.image1 {
+      background-image: url('../../../img/wifi/grupowe_1.jpg');
     }
-
-    &__image-caption {
-        grid-area: caption;
-        justify-self: end;
-        margin: 0.5rem 1rem 0;
-        text-align: right;
-        font-size: 1.2em;
+    &.image2 {
+      background-image: url('../../../img/wifi/grupowe_2.jpg');
     }
-
-    &__content {
-        padding: 0 1rem;
-        grid-area: content;
+    &.image3 {
+      background-image: url('../../../img/wifi/grupowe_3.jpg');
     }
+  }
 
-    &__header {
-        color: #363636;
-        font-size: 3em;
-        font-weight: 700;
-        text-align: center;
+  &__image-caption {
+    grid-area: caption;
+    justify-self: end;
+    margin: 0.5rem 1rem 0;
+    text-align: right;
+    font-size: 1.2em;
+  }
 
-        @media (min-width: 600px) {
-            text-align: left;
-        }
+  &__content {
+    padding: 0 1rem;
+    grid-area: content;
+  }
+
+  &__header {
+    color: #363636;
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+
+    @media (min-width: 600px) {
+      text-align: left;
     }
+  }
 
-    &__text {
-        font-size: 1.2em;
-        text-align: center;
+  &__text {
+    font-size: 1.2em;
+    text-align: center;
 
-        @media (min-width: 600px) {
-            text-align: left;
-        }
+    @media (min-width: 600px) {
+      text-align: left;
     }
+  }
 }
 
 .caption {
-    color: gray;
-    font-size: 0.8em;
+  color: gray;
+  font-size: 0.8em;
 }
 
 .sub-header {
-    color: #363636;
-    font-size: 20px;
-    animation-name: fade-in;
-    animation-delay: 750ms;
-    animation-timing-function: ease-out;
-    animation-duration: 1.5s;
-    animation-fill-mode: backwards;
+  color: #363636;
+  font-size: 20px;
+  animation-name: fade-in;
+  animation-delay: 750ms;
+  animation-timing-function: ease-out;
+  animation-duration: 1.5s;
+  animation-fill-mode: backwards;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.gallery {
+  background: #eee;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8c8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.flickity-page-dots {
+  bottom: 0.5rem;
+}
+
+.flickity-page-dots .dot {
+    opacity: 1;
+    background: transparent;
+    border: 1px solid rgba($color: #fff, $alpha: 0.8);  
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: white;
 }
 
 @keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

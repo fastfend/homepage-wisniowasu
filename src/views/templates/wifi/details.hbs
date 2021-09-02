@@ -2,7 +2,7 @@
 {{> menu }}
 <div class="title_box">
     <h1 class="title_box_text">
-        Sczegóły wydarzenia
+        Szczegóły wydarzenia
     </h1>
 </div>
 {{> wifi_header active_wifi_details=true}}
@@ -12,14 +12,23 @@
 </div>
 <section class="info-card">
     {{!-- <img src="../../../img/wifi/grupowe_1.jpg" alt="zdjęcie organizatorów" class="info-card__image"> --}}
-    <div class="info-card__image image1"></div>
+    {{!-- <div class="info-card__image image1"> --}}
+        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+            <div class="info-card__image image1"></div>
+            <div class="info-card__image image2" style="--offset-y: 40%;"></div>
+            <div class="info-card__image image3"></div>
+            <div class="info-card__image image2" style="--offset-y: 40%;"></div>
+            <div class="info-card__image image1"></div>
+        </div>
+    {{!-- </div> --}}
     <p class="info-card__image-caption">
         Imiona organizatorów<br>
         <span class="caption">to co organizują</span>
     </p>
     <article class="info-card__content">
         <h3 class="info-card__header">Escape room</h3>
-        <p class="info-card__text">Jest to wydarzenie, które stawia przed ucze&shy;stnikami serie zadań wyma&shy;gających
+        <p class="info-card__text">Jest to wydarzenie, które stawia przed ucze&shy;stnikami serie zadań
+            wyma&shy;gających
             współpracy i logi&shy;cznego myślenia. Ma na celu poznać ucze&shy;stników ze sobą nawzajem oraz umożliwić im
             nawiązanie kontaktów międzyoddziałowych.</p>
     </article>

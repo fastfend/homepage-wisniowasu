@@ -1,6 +1,8 @@
 import './details.scss';
-
 import scrollreveal from 'scrollreveal';
+
+import 'flickity';
+
 var items = document.querySelectorAll('.service-card');
 scrollreveal().reveal(items, {
   easing: 'ease-in-out',
