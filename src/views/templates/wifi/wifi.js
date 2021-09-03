@@ -21,7 +21,7 @@ window.onscroll = function () {
   }
 };
 
-var eventDate = new Date(2021, 8, 27, 9, 0);
+var eventDate = new Date(2021, 8, 29, 9, 0);
 
 function updateCountdownText() {
   var updatedText = 'Czas do wydarzenia: ';
@@ -33,15 +33,19 @@ function updateCountdownText() {
   // var minutes = Math.floor((timeLeft % hours) / (1000 * 60));
   // var seconds = Math.floor((timeLeft % minutes) / (1000));
   var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((timeLeft % (1000 * 60)) / (1000));
+  var hours = Math.floor(
+    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  var minutes = Math.floor(
+    (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+  );
+  var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
   if (days > 2) {
     updatedText += days + ' dni';
   } else if (days > 0) {
     if (days === 1) {
-      updatedText += days + ' dzień ' + hours + 'h ' + minutes + 'm'
+      updatedText += days + ' dzień ' + hours + 'h ' + minutes + 'm';
     } else {
       updatedText += days + ' dni ' + hours + 'h ' + minutes + 'm';
     }
@@ -56,12 +60,13 @@ function updateCountdownText() {
   document.getElementById('countdown').innerHTML = updatedText;
 
   if (timeLeft < 0) {
-    document.getElementById('countdown').innerHTML = 'Zapraszamy do wzięcia udziału!' 
+    document.getElementById('countdown').innerHTML =
+      'Zapraszamy do wzięcia udziału!';
   }
   if (timeLeft < -1000 * 60 * 60 * 12) {
-    document.getElementById('countdown').innerHTML = 'Kolejna edycja już wkrótce!' 
+    document.getElementById('countdown').innerHTML =
+      'Kolejna edycja już wkrótce!';
   }
-
 }
 
 updateCountdownText();
