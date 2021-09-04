@@ -30,7 +30,7 @@
     @media (min-width: 600px) {
       height: 300px;
       background-position-y: var(--offset-y, 60%);
-      border-end-end-radius: 25px;
+      // border-end-end-radius: 25px; this line has been moved to gallery class
     }
 
     &.image1 {
@@ -93,31 +93,11 @@
   animation-fill-mode: backwards;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 .gallery {
-  background: #eee;
-}
-
-.gallery-cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8c8;
-  counter-increment: gallery-cell;
-}
-
-/* cell number */
-.gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
+  @media (min-width: 600px) {
+    border-end-end-radius: 25px;
+    overflow: hidden;
+  }
 }
 
 .flickity-page-dots {
