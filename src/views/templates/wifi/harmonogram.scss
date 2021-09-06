@@ -101,6 +101,11 @@ $colour2: #de1444;
 
 }
 
+.soon {
+    font-size: 1.5em;
+    animation: fade-in 1.5s ease 1s 1 normal backwards;
+}
+
 @keyframes stretch-out {
     from {
         width: 10%;

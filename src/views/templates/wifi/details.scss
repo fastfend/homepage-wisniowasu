@@ -30,7 +30,7 @@
     @media (min-width: 600px) {
       height: 300px;
       background-position-y: var(--offset-y, 60%);
-      // border-end-end-radius: 25px; this line has been moved to gallery class
+      border-end-end-radius: 25px;// this line has been moved to gallery class
     }
 
     &.image1 {
@@ -41,6 +41,9 @@
     }
     &.image3 {
       background-image: url('../../../img/wifi/grupowe_3.jpg');
+    }
+    &.strefa_minecraft {
+      background-image: url('../../../img/wifi/atrakcje/strefa_minecraft_0.jpg');
     }
   }
 
@@ -112,6 +115,20 @@
 
 .flickity-page-dots .dot.is-selected {
   background: white;
+}
+
+.page-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.soon {
+  font-size: 1.5em;
+  animation: fade-in 1.5s ease 1s 1 normal backwards;
 }
 
 @keyframes fade-in {
