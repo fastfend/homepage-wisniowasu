@@ -4,7 +4,6 @@
 @import './footer.scss';
 
 html {
-  height: 100%;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -38,7 +37,7 @@ h3 {
 }
 
 .section_topic {
-  margin: 100px 20px 20px 20px;
+  margin: 50px 20px 20px 20px;
   font-weight: 700;
   font-size: 45px;
   color: #de1444;
@@ -60,6 +59,13 @@ h3 {
   }
 }
 
+// when the text is long use this class to avoid weird behaviour on mobile
+.alt-mobile-anim {
+  @media (max-width: 900px) {
+    animation: fade 1s ease-out;
+  }
+}
+
 @keyframes tracking-in-contract {
   0% {
     letter-spacing: 1em;
@@ -76,6 +82,16 @@ h3 {
   }
 }
 
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .title_box {
   height: 250px;
   background: linear-gradient(270deg, #ff7f66, #de1444);
@@ -83,6 +99,11 @@ h3 {
   align-items: flex-end;
   justify-content: center;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45);
+
+  @media (max-width: 600px) {
+    height: unset;
+    min-height: 150px;
+  }
 
   &_text {
     width: 100%;

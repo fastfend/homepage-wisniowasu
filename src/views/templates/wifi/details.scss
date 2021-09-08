@@ -1,0 +1,184 @@
+@import "../../../scss/wifi_header.scss";
+@import "./flickity.css";
+
+.info-card {
+  display: grid;
+  // grid-template-rows: 250px 5em 1fr;
+  // grid-template-areas: "image" "caption" "content";
+  grid-template-rows: 1fr 250px 6em;
+  grid-template-areas: "content" "image" "caption";
+  margin: 1rem;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+
+  @media (min-width: 600px) {
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: 1fr 5em;
+    grid-template-areas:
+      "image content"
+      "caption content";
+  }
+
+  &__image {
+    background-size: cover;
+    grid-area: image;
+    // background-image: attr(data-src url);
+    width: 100%;
+    height: 100%;
+    background-position-y: var(--mobile-offset, 50%);
+
+    @media (min-width: 600px) {
+      height: 300px;
+      background-position-y: var(--offset-y, 60%);
+      // border-end-end-radius: 25px;// this line has been moved to gallery class
+    }
+
+    &.rounded {
+      border-end-end-radius: 25px;
+    }
+
+    &.image1 {
+      background-image: url("../../../img/wifi/grupowe_1.jpg");
+    }
+    &.image2 {
+      background-image: url("../../../img/wifi/grupowe_2.jpg");
+    }
+    &.image3 {
+      background-image: url("../../../img/wifi/grupowe_3.jpg");
+    }
+    &.strefa_minecraft {
+      background-image: url("../../../img/wifi/atrakcje/strefa_minecraft_0.jpg");
+    }
+    &.loteria {
+      background-image: url("../../../img/wifi/atrakcje/loteria_0.jpg");
+    }
+    &.www-0 {
+      background-image: url("../../../img/wifi/atrakcje/www_0.jpg");
+    }
+    &.www-1 {
+      background-image: url("../../../img/wifi/atrakcje/www_1.jpg");
+    }
+    &.montaz {
+      background-image: url("../../../img/wifi/atrakcje/montaz_0.jpg");
+    }
+    &.rakietowe {
+      background-image: url("../../../img/wifi/atrakcje/kolko_rakietowe_0.jpg");
+    }
+    &.koncert-0 {
+      background-image: url("../../../img/wifi/atrakcje/scena_glowna_0.jpg");
+    }
+    &.koncert-1 {
+      background-image: url("../../../img/wifi/atrakcje/scena_glowna_1.jpg");
+    }
+    &.koncert-2 {
+      background-image: url("../../../img/wifi/atrakcje/scena_glowna_2.jpg");
+    }
+    &.szachy {
+      background-image: url("../../../img/wifi/atrakcje/szachy_0.jpg");
+    }
+    &.cosplay-0 {
+      background-image: url("../../../img/wifi/atrakcje/cosplay_0.jpg");
+    }
+    &.cosplay-1 {
+      background-image: url("../../../img/wifi/atrakcje/cosplay_1.jpg");
+    }
+    &.gry {
+      background-image: url("../../../img/wifi/atrakcje/gry_planszowe_0.jpg");
+    }
+  }
+
+  &__image-caption {
+    grid-area: caption;
+    justify-self: end;
+    margin: 0.5rem 1rem 0;
+    text-align: right;
+    font-size: 1.2em;
+  }
+
+  &__content {
+    padding: 0 1rem;
+    grid-area: content;
+  }
+
+  &__header {
+    color: #363636;
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+
+    @media (min-width: 600px) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    font-size: 1.2em;
+    text-align: center;
+
+    @media (min-width: 600px) {
+      text-align: left;
+    }
+  }
+}
+
+.caption {
+  color: gray;
+  font-size: 0.8em;
+}
+
+.sub-header {
+  color: #363636;
+  font-size: 20px;
+  animation-name: fade-in;
+  animation-delay: 750ms;
+  animation-timing-function: ease-out;
+  animation-duration: 1.5s;
+  animation-fill-mode: backwards;
+}
+
+.gallery {
+  @media (min-width: 600px) {
+    border-end-end-radius: 25px;
+    overflow: hidden;
+  }
+}
+
+.flickity-page-dots {
+  bottom: 0.5rem;
+}
+
+.flickity-page-dots .dot {
+  opacity: 1;
+  background: transparent;
+  border: 1px solid rgba($color: #fff, $alpha: 0.8);
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}
+
+.page-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.soon {
+  font-size: 1.5em;
+  animation: fade-in 1.5s ease 1s 1 normal backwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

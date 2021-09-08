@@ -1,0 +1,227 @@
+@import "../../../scss/shadows.scss";
+@import "../../../scss/wifi_header.scss";
+$colour1: #ff7f66;
+$colour2: #de1444;
+
+#wifi_description {
+  width: 600px;
+  height: auto;
+  margin-bottom: -40px;
+}
+
+#wifi_description_title {
+  font-size: 28px;
+}
+
+#wifi-logo {
+  height: 200px;
+}
+
+.no-margin {
+  margin: 0;
+  padding: 0;
+}
+
+.gradient-button {
+  margin: 20px auto;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 1em 3em;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  background: linear-gradient(90deg, $colour1, $colour2);
+}
+
+.gradient-button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  z-index: -1;
+  filter: blur(5px);
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(90deg, $colour1, $colour2);
+}
+
+@media (hover: hover) {
+  .gradient-button:hover {
+    transform: scale(1.1);
+  }
+
+  .btn:hover::before {
+    filter: blur(10px);
+    opacity: 0.9;
+  }
+}
+
+.minicard {
+  @include shadow("nonclikable");
+  background-color: white;
+  width: 280px;
+  height: 420px;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+
+  &-icon {
+    margin-top: 5px;
+    height: 100px;
+  }
+
+  &-title {
+    font-family: "Raleway", sans-serif;
+    margin: 20px 0 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &-text {
+    font-size: 14px;
+
+    text-align: justify;
+    margin: 0 auto auto auto;
+  }
+
+  @media (max-width: 696px) {
+    height: unset;
+  }
+}
+
+.sponsors {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px;//1200px;
+  margin: 20px auto;
+
+  @media (min-width: 768px) {
+    flex-flow: row wrap;
+  }
+
+  &__image {
+    margin: 0.5rem 1rem;
+    max-width: 80vw;
+    max-height: 7em;//10em;
+    padding: 1.5em; //1em is enough when max-height is bigger
+    background-color: white;
+    border-radius: 2em;
+    box-shadow: 0 0 10px rgba(#000, 0.1);
+    transition: all 150ms ease;
+  }
+
+  &__image:hover {
+    transform: scale(1.1);
+    margin: 0.5rem 1.5rem;
+  }
+}
+
+.cardgroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  max-width: 1050px;
+  margin: -20px 0;
+
+  @media (max-width: 696px) {
+    overflow: hidden;
+  }
+}
+
+.buttonsgroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 0 -20px 0;
+
+  a.button {
+    width: 470px;
+    margin: 20px;
+    position: relative;
+
+    @media (max-width: 1036px) {
+      max-width: 640px;
+      width: 100%;
+    }
+
+    div.img_container {
+      @include shadow("button");
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: white;
+      height: 150px;
+      transition: transform 0.225s ease-in-out !important;
+      transform: scale(1) !important;
+      z-index: 1;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: center;
+      }
+    }
+
+    @media (hover: hover) {
+      div.img_container:hover {
+        transform: scale(1.05) !important;
+      }
+    }
+
+    div.img_container::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(7deg, rgba(0, 0, 0, 1) 0%, rgba(100, 100, 100, 0) 60%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .button-text {
+      position: absolute;
+      display: flex;
+      height: 130px;
+      width: calc(100% - 40px);
+      top: 0;
+      left: 0;
+      align-items: flex-end;
+      padding: 0 20px 20px 20px;
+      color: rgba(255, 255, 255, 1);
+      font-size: 30px;
+      font-weight: 700;
+      font-family: "Raleway", sans-serif;
+      pointer-events: none;
+      z-index: 1;
+    }
+  }
+}
