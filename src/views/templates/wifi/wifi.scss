@@ -275,11 +275,17 @@ $colour2: #de1444;
 
   &__social-link {
     display: block;
-    width: 5em;
-    height: 5em;
-    margin: 0 1rem;
+    width: 4em;
+    height: 4em;
+    margin: 0 0.7rem;
     background-size: cover;
     transition: all 100ms ease-out;
+
+    @media (min-width: 792px) {
+      margin: 0 1rem;
+      width: 5em;
+      height: 5em;
+    }
 
     @media (hover: hover) {
       filter: grayscale(1);
