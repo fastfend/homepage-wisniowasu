@@ -175,8 +175,7 @@ module.exports = {
     }),
     new HtmlWebPackPlugin({
       title: 'Wiśniowa SU | Samorząd Uczniowski',
-      desc:
-        'Poznaj samorząd uczniowski z Technikum Mechatronicznego nr 1 w Warszawie, którego połączyła chęć zmian. Zobacz jaki jest samorząd na Wiśniowej 56!',
+      desc: 'Poznaj samorząd uczniowski z Technikum Mechatronicznego nr 1 w Warszawie, którego połączyła chęć zmian. Zobacz jaki jest samorząd na Wiśniowej 56!',
       template: './src/views/templates/home/home.hbs',
       filename: './index.html',
       chunks: ['main', 'home'],
@@ -212,8 +211,7 @@ module.exports = {
     }),
     new HtmlWebPackPlugin({
       title: 'Dla ucznia - Wiśniowa SU | Samorząd Uczniowski',
-      desc:
-        'Materiały oraz usługi przeznaczone dla uczniów Wiśniowej',
+      desc: 'Materiały oraz usługi przeznaczone dla uczniów Wiśniowej',
       template: './src/views/templates/forstudent/forstudent.hbs',
       filename: './forstudent/index.html',
       chunks: ['main', 'forstudent'],
@@ -239,8 +237,8 @@ module.exports = {
       minify: htmlMinifyOptions,
     }),
     new HtmlWebPackPlugin({
-      title: 'WiFI - Wiśniowa SU | Samorząd Uczniowski',
-      desc: 'PLACEHOLDER',
+      title: 'WiFI | Wiśniowa SU',
+      desc: 'Informacje o najnowszej edycji Wiśniowego Festiwalu Inicjatyw',
       template: './src/views/templates/wifi/wifi.hbs',
       filename: './wifi/index.html',
       chunks: ['main', 'wifi'],
@@ -248,8 +246,8 @@ module.exports = {
       minify: htmlMinifyOptions,
     }),
     new HtmlWebPackPlugin({
-      title: 'Harmonogram WiFI - Wiśniowa SU | Samorząd Uczniowski',
-      desc: 'PLACEHOLDER',
+      title: 'Harmonogram WiFI | Wiśniowa SU',
+      desc: 'Harmonogram atrakcji WiFI',
       template: './src/views/templates/wifi/harmonogram.hbs',
       filename: './wifi/harmonogram/index.html',
       chunks: ['main', 'harmonogram'],
@@ -257,8 +255,8 @@ module.exports = {
       minify: htmlMinifyOptions,
     }),
     new HtmlWebPackPlugin({
-      title: 'Szczegóły wydarzenia - Wiśniowa SU | Samorząd Uczniowski',
-      desc: 'PLACEHOLDER',
+      title: 'Szczegóły wydarzenia | Wiśniowa SU',
+      desc: 'Poznaj szczegóły i organizatorów atrakcji tegorocznej edycji WiFI',
       template: './src/views/templates/wifi/details.hbs',
       filename: './wifi/details/index.html',
       chunks: ['main', 'details'],
@@ -266,8 +264,8 @@ module.exports = {
       minify: htmlMinifyOptions,
     }),
     new HtmlWebPackPlugin({
-      title: 'Kontakt - Wiśniowa SU | Samorząd Uczniowski',
-      desc: 'PLACEHOLDER',
+      title: 'Kontakt | Wiśniowa SU',
+      desc: 'Skontaktuj się z Samorządem Uczniowskim w sprawach związanych z WiFI',
       template: './src/views/templates/wifi/contact.hbs',
       filename: './wifi/contact/index.html',
       chunks: ['main', 'wifi_contact'],
