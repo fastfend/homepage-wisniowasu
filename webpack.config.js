@@ -238,7 +238,7 @@ module.exports = {
     }),
     new HtmlWebPackPlugin({
       title: 'WiFI | Wiśniowa SU',
-      desc: 'Informacje o najnowszej edycji Wiśniowego Festiwalu Inicjatyw',
+      desc: 'Druga edycja Wiśniowego Festiwalu Inicjatyw, który ma uczcić świetne wyniki uczniów',
       template: './src/views/templates/wifi/wifi.hbs',
       filename: './wifi/index.html',
       chunks: ['main', 'wifi'],
@@ -247,7 +247,7 @@ module.exports = {
     }),
     new HtmlWebPackPlugin({
       title: 'Harmonogram WiFI | Wiśniowa SU',
-      desc: 'Harmonogram atrakcji WiFI',
+      desc: 'Tutaj znajdziesz harmonogram całego wydarzenia',
       template: './src/views/templates/wifi/harmonogram.hbs',
       filename: './wifi/harmonogram/index.html',
       chunks: ['main', 'harmonogram'],
@@ -256,7 +256,7 @@ module.exports = {
     }),
     new HtmlWebPackPlugin({
       title: 'Szczegóły wydarzenia | Wiśniowa SU',
-      desc: 'Poznaj szczegóły i organizatorów atrakcji tegorocznej edycji WiFI',
+      desc: 'Wszystko, co musisz wiedzieć o WiFI',
       template: './src/views/templates/wifi/details.hbs',
       filename: './wifi/details/index.html',
       chunks: ['main', 'details'],
@@ -265,7 +265,7 @@ module.exports = {
     }),
     new HtmlWebPackPlugin({
       title: 'Kontakt | Wiśniowa SU',
-      desc: 'Skontaktuj się z Samorządem Uczniowskim w sprawach związanych z WiFI',
+      desc: 'Miejsce na wasze pytania',
       template: './src/views/templates/wifi/contact.hbs',
       filename: './wifi/contact/index.html',
       chunks: ['main', 'wifi_contact'],
