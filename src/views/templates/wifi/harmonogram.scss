@@ -24,7 +24,7 @@ $colour2: #de1444;
 
 .schedule {
     display: grid;
-    grid-template-columns: 120px 1fr; //120px 1fr;
+    grid-template-columns: 120px 1fr;
     gap: 1em 1em;
     margin: 50px 10px 0 10px;
     max-width: 1000px;
@@ -46,7 +46,7 @@ $colour2: #de1444;
         background: linear-gradient(135deg, $colour1, $colour2);
         color: white;
         text-align: center;
-        font-size: 1.75em;// 18px;
+        font-size: 18px;
         font-weight: 500;
         text-shadow: 0 0 14px rgba(0, 0, 0, 0.5);
         animation: fade-in 650ms ease-out;
@@ -55,7 +55,7 @@ $colour2: #de1444;
         z-index: 1;
 
         @media (max-width: 900px) {
-            font-size: 1.75em;// 16px;
+            font-size: 16px;
         }
     }
 
