@@ -3,6 +3,8 @@
 
 .info-card {
   display: grid;
+  // grid-template-rows: 250px 5em 1fr;
+  // grid-template-areas: "image" "caption" "content";
   grid-template-rows: 1fr 250px 6em;
   grid-template-areas: "content" "image" "caption";
   margin: 1rem;
@@ -23,16 +25,19 @@
   &__image {
     background-size: cover;
     grid-area: image;
+    // background-image: attr(data-src url);
     width: 100%;
     height: 100%;
-    background-position-y: var(--offset-y, 100%);
+    background-position-y: var(--mobile-offset, 50%);
 
     @media (min-width: 600px) {
       height: 300px;
+      background-position-y: var(--offset-y, 60%);
+      // border-end-end-radius: 25px;// this line has been moved to gallery class
+    }
 
-      &.rounded {
-        border-end-end-radius: 25px;
-      }
+    &.rounded {
+      border-end-end-radius: 25px;
     }
 
     &.image1 {
@@ -80,29 +85,8 @@
     &.cosplay-1 {
       background-image: url("../../../img/wifi/atrakcje/cosplay_1.jpg");
     }
-    &.cosplay-2 {
-      background-image: url("../../../img/wifi/atrakcje/cosplay_2.jpg");
-    }
     &.gry {
       background-image: url("../../../img/wifi/atrakcje/gry_planszowe_0.jpg");
-    }
-    &.konsole-0 {
-      background-image: url("../../../img/wifi/atrakcje/strefa_konsol_0.jpg");
-    }
-    &.konsole-1 {
-      background-image: url("../../../img/wifi/atrakcje/strefa_konsol_1.jpg");
-    }
-    &.dekoracje-0 {
-      background-image: url("../../../img/wifi/atrakcje/dekoracje_0.jpg");
-    }
-    &.dekoracje-1 {
-      background-image: url("../../../img/wifi/atrakcje/dekoracje_1.jpg");
-    }
-    &.sebixy-0 {
-      background-image: url("../../../img/wifi/atrakcje/sebixy_0.jpeg");
-    }
-    &.sebixy-1 {
-      background-image: url("../../../img/wifi/atrakcje/glowny_koordynator_1.jpg");
     }
   }
 
