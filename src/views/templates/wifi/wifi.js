@@ -69,9 +69,6 @@ function updateCountdownText() {
   }
 }
 
-document.getElementById('countdown').innerHTML =
-  'Czas do wydarzenia: już wkrótce™';
-
-// updateCountdownText();
-// var countdownIntervalId = setInterval(updateCountdownText, 1000);
-// console.log(countdownIntervalId);
+updateCountdownText();
+var countdownIntervalId = setInterval(updateCountdownText, 1000);
+console.log(countdownIntervalId);
