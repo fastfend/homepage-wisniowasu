@@ -116,7 +116,7 @@ $colour2: #de1444;
   margin: 20px auto;
 
   &__image {
-    margin: 0rem 1rem;
+    margin: 0.5rem 1rem;
     max-width: 80vw;
     max-height: 9em;
     // padding: 0.5em;
@@ -126,7 +126,6 @@ $colour2: #de1444;
     transition: all 150ms ease;
 
     @media (min-width: 768px) {
-      margin: 0.5rem 1rem;
       max-height: 10em;
       padding: 2em;
     }
