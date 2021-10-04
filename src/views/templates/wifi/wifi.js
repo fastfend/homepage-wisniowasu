@@ -21,7 +21,7 @@ window.onscroll = function () {
   }
 };
 
-var eventDate = new Date(2021, 8, 29, 9, 0);
+var eventDate = new Date(2021, 9, 13, 9, 30);
 
 function updateCountdownText() {
   var updatedText = 'Czas do wydarzenia: ';
@@ -69,9 +69,6 @@ function updateCountdownText() {
   }
 }
 
-document.getElementById('countdown').innerHTML =
-  'Czas do wydarzenia: już wkrótce™';
-
-// updateCountdownText();
-// var countdownIntervalId = setInterval(updateCountdownText, 1000);
-// console.log(countdownIntervalId);
+updateCountdownText();
+var countdownIntervalId = setInterval(updateCountdownText, 1000);
+console.log(countdownIntervalId);
