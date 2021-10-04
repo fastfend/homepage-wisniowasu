@@ -21,7 +21,7 @@ window.onscroll = function () {
   }
 };
 
-var eventDate = new Date(2021, 9, 13, 9, 0);
+var eventDate = new Date(2021, 9, 13, 9, 30);
 
 function updateCountdownText() {
   var updatedText = 'Czas do wydarzenia: ';
