@@ -11,6 +11,6 @@ install:
 script:
   - npm run build
 node_js:
-  - lts/*
+  - 14
 after_success:
   - bash travis_build.sh
