@@ -76,5 +76,8 @@
     "smoothscroll-polyfill": "^0.4.4",
     "svg-url-loader": "^3.0.3",
     "vanilla-tilt": "^1.7.0"
+  },
+  "volta": {
+    "node": "14.18.3"
   }
 }
