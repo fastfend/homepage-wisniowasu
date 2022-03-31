@@ -43,7 +43,7 @@
     "imagemin-svgo": "^7.0.0",
     "imagemin-webpack": "^5.1.1",
     "mini-css-extract-plugin": "^0.8.2",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "prettier": "^2.0.5",
     "responsive-loader": "^1.2.0",
