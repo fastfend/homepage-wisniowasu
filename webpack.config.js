@@ -183,6 +183,15 @@ module.exports = {
       minify: htmlMinifyOptions,
     }),
     new HtmlWebPackPlugin({
+      title: 'Zespoł 2021/2022 - Wiśniowa SU | Samorząd Uczniowski',
+      desc: 'Skład zespołu SU w roku 2021/22',
+      template: './src/views/templates/team/team_2021_2022.hbs',
+      filename: './team_2021_2022/index.html',
+      chunks: ['main', 'team'],
+      version: json.version,
+      minify: htmlMinifyOptions,
+    }),
+    new HtmlWebPackPlugin({
       title: 'Zespoł - Wiśniowa SU | Samorząd Uczniowski',
       desc: 'Aktualny skład zespołu SU',
       template: './src/views/templates/team/team.hbs',
